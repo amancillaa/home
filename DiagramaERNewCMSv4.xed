@@ -1,31 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?><Diagram version="1.0" type="POSTGRES" versionMajor="9" versionMinor="6" groupSchema="false" hide_inv="false">
 <Table id="0" name="CAB_ESTRUCTURADOC" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla donde se registra la estructura de recursos que conforman el documento.</Text>
-<Column id="1" name="COD_REPOSITORIO" type="varchar" length="6" nulls="true"/>
-<Column id="2" name="COD_RECURSO" type="varchar" length="6" nulls="true"/>
-<Column id="3" name="NOM_RECURSO" type="varchar" length="100" nulls="true"/>
-<Column id="4" name="NUM_ORDEN" type="integer" length="25" nulls="true"/>
-<Column id="5" name="NUM_CANTMIN" type="integer" length="25" nulls="true">
+<Column id="1" name="COD_REPOSITORIO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del repositorio</CP>
+</Column>
+<Column id="2" name="COD_RECURSO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del recurso</CP>
+</Column>
+<Column id="3" name="NOM_RECURSO" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del recurso</CP>
+</Column>
+<Column id="4" name="NUM_ORDEN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero de orden del recurso</CP>
+</Column>
+<Column id="5" name="NUM_CANTMIN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Cantidad minima del recurso en el documento</CP>
 </Column>
-<Column id="6" name="NUM_CANTMAX" type="integer" length="25" nulls="true">
+<Column id="6" name="NUM_CANTMAX" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Cantidad Max del recurso en el documento</CP>
 </Column>
-<Column id="7" name="IND_REQUERIDO" type="boolean" length="25" nulls="true"/>
-<Column id="8" name="NOM_CSSCLASS" type="varchar" length="100" nulls="true"/>
-<Column id="9" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="7" name="IND_REQUERIDO" type="boolean" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indicador de que es necesario registrar el recurso en todos los documentos</CP>
+</Column>
+<Column id="8" name="NOM_CSSCLASS" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del atributo CLASS generado para el maquetado CSS</CP>
+</Column>
+<Column id="9" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="10" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="10" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="11" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="11" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="12" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="12" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -43,55 +63,75 @@
 </Table>
 <Table id="13" name="DET_ESTRUCTURADOC" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla donde se registra el detalle los campos que conforman el recurso.</Text>
-<Column id="14" name="COD_REPOSITORIO" type="varchar" length="6" nulls="true"/>
-<Column id="15" name="COD_RECURSO" type="varchar" length="6" nulls="true">
+<Column id="14" name="COD_REPOSITORIO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador del repositoriio</CP>
+</Column>
+<Column id="15" name="COD_RECURSO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Identificador del recurso</CP>
 </Column>
-<Column id="16" name="COD_CAMPO" type="varchar" length="6" nulls="true">
+<Column id="16" name="COD_CAMPO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Identificador del campo</CP>
 </Column>
-<Column id="17" name="NOM_CAMPO" type="varchar" length="100" nulls="true">
+<Column id="17" name="NOM_CAMPO" type="varchar" length="100" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre del campo</CP>
 </Column>
-<Column id="18" name="COD_TIPOCAMPO" type="varchar" length="2" nulls="true">
+<Column id="18" name="COD_TIPOCAMPO" type="varchar" length="2" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Catalogo Nro 9999 (NUMBER, COMBO, ETC )</CP>
 </Column>
-<Column id="19" name="NUM_ORDEN" type="integer" length="25" nulls="true"/>
-<Column id="20" name="CAT_ATRIBUTO" type="varchar" length="4" nulls="true">
+<Column id="19" name="NUM_ORDEN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero que indica el orden</CP>
+</Column>
+<Column id="20" name="VAL_CATALOGO" type="varchar" length="4" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Código del catalogo par cargar el tipo de campo COMBO</CP>
 </Column>
-<Column id="21" name="EXP_REGULAR" type="varchar" length="50" nulls="true">
+<Column id="21" name="EXP_REGULAR" type="varchar" length="50" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Expresión regular para aplicar al valor del campo</CP>
 </Column>
-<Column id="22" name="VAL_MIN" type="integer" length="25" nulls="true"/>
-<Column id="23" name="VAL_MAX" type="integer" length="25" nulls="true"/>
-<Column id="24" name="IND_MULTIVALOR" type="boolean" length="25" nulls="true"/>
-<Column id="25" name="IND_REQUERIDO" type="boolean" length="1" nulls="true">
-<CP name="DEFAULT_VALUE">'0'</CP>
+<Column id="22" name="VAL_MIN" type="numeric" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="PRECISION">15</CP>
+<CP name="SCALE">5</CP>
+<CP name="COMMENTS">Valor del numero minimo para elñ tipo de campo NUMERICO</CP>
 </Column>
-<Column id="26" name="IND_BUSCABLE" type="boolean" length="1" nulls="true">
-<CP name="DEFAULT_VALUE">true</CP>
+<Column id="23" name="VAL_MAX" type="numeric" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="PRECISION">15</CP>
+<CP name="SCALE">5</CP>
+<CP name="COMMENTS">Valor del numero maximo para elñ tipo de campo NUMERICO</CP>
 </Column>
-<Column id="27" name="IND_VISIBLE" type="boolean" length="25" nulls="true">
-<CP name="COMMENTS">KEYWORSDS PARA VISUALICE TODA LA DATA SOLO BUSCAR</CP>
+<Column id="24" name="IND_REQUERIDO" type="boolean" length="1" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indicador obliga el ingreso del valor del campo</CP>
 </Column>
-<Column id="28" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="25" name="IND_BUSCABLE" type="boolean" length="1" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indica que el campo es utilizado para las busquedas</CP>
+</Column>
+<Column id="26" name="IND_VISIBLE" type="boolean" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Inidca que el campo no se visualizar para el cliente ejemplo KEYWORSDS PARA VISUALICE TODA LA DATA SOLO BUSCAR</CP>
+</Column>
+<Column id="27" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="29" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="28" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="30" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="29" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="31" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="30" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -107,37 +147,37 @@
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="32" name="RECURSO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="31" name="RECURSO" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla que registra los recursos del documento</Text>
-<Column id="33" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="true">
+<Column id="32" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero de identificador del documento</CP>
 </Column>
-<Column id="34" name="NUM_SECRECURSO" type="smallint" length="25" nulls="true">
+<Column id="33" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero consecutivo generado por el sistema con el pattron (Maximo + 1)</CP>
 </Column>
-<Column id="35" name="COD_RECURSO" type="varchar" length="6" nulls="true">
+<Column id="34" name="COD_RECURSO" type="varchar" length="6" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del recurso CATALOGO XXX</CP>
 </Column>
-<Column id="36" name="NOM_RECURSO" type="varchar" length="200" nulls="true">
+<Column id="35" name="NOM_RECURSO" type="varchar" length="200" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre del recurso</CP>
 </Column>
-<Column id="37" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="36" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="38" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="37" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="39" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="38" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="40" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="39" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -153,37 +193,37 @@
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="41" name="DOCUMENTO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="40" name="DOCUMENTO" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla que registra los documentos.</Text>
-<Column id="42" name="NUM_SECDOCUMENTO" type="serial" length="25" nulls="true">
+<Column id="41" name="NUM_SECDOCUMENTO" type="serial" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero de secuencia autogenerado del identificador del documento</CP>
 </Column>
-<Column id="43" name="VAL_IDENTIFICADOR" type="varchar" length="100" nulls="true">
+<Column id="42" name="VAL_IDENTIFICADOR" type="varchar" length="100" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Valor oncatenado del recurso IDENTIFICADOR</CP>
 </Column>
-<Column id="44" name="COD_ESTADODOC" type="varchar" length="2" nulls="true">
+<Column id="43" name="COD_ESTADODOC" type="varchar" length="2" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del estado del documento CATALOGO XXX (ESTADO COMO GENERADO, TERMINADO, PUBLICADO)</CP>
 </Column>
-<Column id="45" name="COD_REPOSITORIO" type="varchar" length="6" nulls="true">
+<Column id="44" name="COD_REPOSITORIO" type="varchar" length="6" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de identificacion del repositorio</CP>
 </Column>
-<Column id="46" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="45" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="47" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="46" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="48" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="47" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="49" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="48" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -199,33 +239,29 @@
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="50" name="REPOSITORIO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="49" name="REPOSITORIO" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla donde se regsitran los repositorios que contiene a un conjunto de documentos referidos a un tema o afinidad.</Text>
-<Column id="51" name="COD_REPOSITORIO" type="varchar" length="6" nulls="true">
+<Column id="50" name="COD_REPOSITORIO" type="varchar" length="6" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de identificacion del repositorio</CP>
 </Column>
-<Column id="52" name="NOM_REPOSITORIO" type="varchar" length="200" nulls="true">
+<Column id="51" name="NOM_REPOSITORIO" type="varchar" length="200" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre del repositorio</CP>
 </Column>
-<Column id="53" name="NUM_SECARCHIVO" type="integer" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">0</CP>
-<CP name="COMMENTS">Numero identificador del archivo CSS generado</CP>
-</Column>
-<Column id="54" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="52" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario de registro</CP>
 </Column>
-<Column id="55" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="53" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="56" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="54" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario de modificacion</CP>
 </Column>
-<Column id="57" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="55" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -241,46 +277,42 @@
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="58" name="ARCHIVO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="56" name="ARCHIVO" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla donde se registran los datos de los archivos generados por las vistas de los documentos o por lo que genera el repositorio
 como archivos css,word,pdf,html,json. etc.</Text>
-<Column id="59" name="NUM_SECARCHIVO" type="serial" length="25" nulls="true">
+<Column id="57" name="NUM_SECARCHIVO" type="serial" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero de secuencia autogenerado del identificador del archivo</CP>
 </Column>
-<Column id="60" name="COD_TIPOARCHIVO" type="varchar" length="6" nulls="true">
+<Column id="58" name="COD_TIPOARCHIVO" type="varchar" length="6" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Tipo del documento que se genera CATALOGO XYZ (HTML, XML, JSON, PDF, WORD, etc)</CP>
 </Column>
-<Column id="61" name="NOM_ARCHIVO" type="varchar" length="100" nulls="true">
+<Column id="59" name="NOM_ARCHIVO" type="varchar" length="100" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre del archivo generado junto con la extension</CP>
 </Column>
-<Column id="62" name="EXP_HASH" type="varchar" length="200" nulls="true">
+<Column id="60" name="EXP_HASH" type="varchar" length="200" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">SHA-1 del documento ejemplo 60c6d277a8bd81de7fdde19201bf9c58a3df08f4</CP>
 </Column>
-<Column id="63" name="DIR_ARCHIVO" type="varchar" length="300" nulls="true">
+<Column id="61" name="DIR_ARCHIVO" type="varchar" length="300" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Direccion del file system del documento</CP>
 </Column>
-<Column id="64" name="NUM_SECVISTA" type="integer" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">0</CP>
-<CP name="COMMENTS">Numero identificador de la vista</CP>
-</Column>
-<Column id="65" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="62" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo usuario que registro</CP>
 </Column>
-<Column id="66" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="63" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="67" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="64" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario de modificacion</CP>
 </Column>
-<Column id="68" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="65" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">fecha de modificacion</CP>
 </Column>
@@ -296,32 +328,32 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="69" name="FOLDER" schema="CMS" database="SMARTLEX_BD" background="16777165">
-<Column id="70" name="NUM_SECFOLDER" type="serial" length="25" nulls="true">
+<Table id="66" name="FOLDER" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Column id="67" name="NUM_SECFOLDER" type="serial" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero de secuencia autogenerado del identificador de FOLDER</CP>
 </Column>
-<Column id="71" name="NOM_FOLDER" type="varchar" length="200" nulls="true">
+<Column id="68" name="NOM_FOLDER" type="varchar" length="200" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre del folder</CP>
 </Column>
-<Column id="72" name="EXP_PATH" type="varchar" length="200" nulls="true">
+<Column id="69" name="EXP_PATH" type="varchar" length="200" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Expresion de la ruta o ptah del folder /ROOT/MI_CARPETA</CP>
 </Column>
-<Column id="73" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="70" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="74" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="71" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="75" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="72" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="76" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="73" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -337,32 +369,32 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="77" name="ACCESO_DIRECTO" schema="CMS" database="SMARTLEX_BD" background="16777165">
-<Column id="78" name="NUM_SECVISTA" type="integer" length="25" nulls="true">
+<Table id="74" name="ACCESO_DIRECTO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Column id="75" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero identificador de la vista</CP>
 </Column>
-<Column id="79" name="NUM_SECFOLDER" type="integer" length="25" nulls="true">
+<Column id="76" name="NUM_SECFOLDER" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero indentificador del folder</CP>
 </Column>
-<Column id="80" name="NOM_DOCU_ACCESO_DIRECTO" type="varchar" length="200" nulls="true">
+<Column id="77" name="NOM_ACCESODIRECTO" type="varchar" length="200" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre del acceso directo</CP>
 </Column>
-<Column id="81" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="78" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="82" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="79" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="83" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="80" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="84" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="81" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -378,11 +410,11 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="85" name="Usuario" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
-<Column id="86" name="ID" type="varchar" length="25" nulls="true"/>
-<Column id="87" name="COD_USER" type="varchar" length="25" nulls="true"/>
-<Column id="88" name="NOM_USER" type="varchar" length="25" nulls="true"/>
-<Column id="89" name="PASSWORD" type="varchar" length="25" nulls="true"/>
+<Table id="82" name="Usuario" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Column id="83" name="ID" type="varchar" length="25" nulls="true"/>
+<Column id="84" name="COD_USER" type="varchar" length="25" nulls="true"/>
+<Column id="85" name="NOM_USER" type="varchar" length="25" nulls="true"/>
+<Column id="86" name="PASSWORD" type="varchar" length="25" nulls="true"/>
 <Storage name="transferTable" value="false"/>
 <Storage name="ValueCompression" value="false"/>
 <Storage name="DistributeRandom" value="false"/>
@@ -394,9 +426,9 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="90" name="ROL" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
-<Column id="91" name="ID" type="varchar" length="25" nulls="true"/>
-<Column id="92" name="ROL" type="varchar" length="25" nulls="true"/>
+<Table id="87" name="ROL" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Column id="88" name="ID" type="varchar" length="25" nulls="true"/>
+<Column id="89" name="ROL" type="varchar" length="25" nulls="true"/>
 <Storage name="transferTable" value="false"/>
 <Storage name="ValueCompression" value="false"/>
 <Storage name="DistributeRandom" value="false"/>
@@ -408,28 +440,45 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="93" name="REFERENCIA" schema="CMS" database="SMARTLEX_BD" background="16777165">
-<Column id="94" name="NUM_SECREF" type="integer" length="25" nulls="true"/>
-<Column id="95" name="COD_TIPOREF" type="varchar" length="25" nulls="true">
-<CP name="COMMENTS">MULTILINK, REFERENCIA, POPUP</CP>
+<Table id="90" name="REFERENCIA" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra las referencias del recurso</Text>
+<Column id="91" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indetificador del documento</CP>
 </Column>
-<Column id="96" name="NUM_SECRECURSOREF" type="varchar" length="25" nulls="true"/>
-<Column id="97" name="NUM_SECVERSIONREF" type="varchar" length="25" nulls="true"/>
-<Column id="98" name="NUM_SECRECURSO_ORIGEN" type="integer" length="25" nulls="true"/>
-<Column id="99" name="NUM_SECVERSION_ORIGEN" type="integer" length="25" nulls="true"/>
-<Column id="100" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="92" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador del recurso</CP>
+</Column>
+<Column id="93" name="NUM_SECVERSION" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la version del recurso</CP>
+</Column>
+<Column id="94" name="NUM_SECREF" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indetificador de la referencia al recurso</CP>
+</Column>
+<Column id="95" name="COD_TIPOREF" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del tipo de componente VIS-VISTA o REC-RECURSO</CP>
+</Column>
+<Column id="96" name="COD_MODOREF" type="varchar" length="3" nulls="true">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de la forma de presentacion MULTILINK, REFERENCIA, POPUP</CP>
+</Column>
+<Column id="97" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="101" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="98" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="102" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="99" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="103" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="100" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -445,45 +494,45 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="104" name="CAMPO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="101" name="CAMPO" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla que registra los campos que conforman el recurso.</Text>
-<Column id="105" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="true">
+<Column id="102" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero identificador del documento</CP>
 </Column>
-<Column id="106" name="NUM_SECRECURSO" type="smallint" length="25" nulls="true">
+<Column id="103" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero de identificacion del recurso</CP>
 </Column>
-<Column id="107" name="NUM_SECVERSION" type="smallint" length="25" nulls="true">
+<Column id="104" name="NUM_SECVERSION" type="smallint" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero identificador de la version</CP>
 </Column>
-<Column id="108" name="NUM_SECCAMPO" type="smallint" length="25" nulls="true">
+<Column id="105" name="NUM_SECCAMPO" type="smallint" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero consecutivo generado por el sistema con el pattron (Maximo + 1)</CP>
 </Column>
-<Column id="109" name="COD_CAMPO" type="varchar" length="6" nulls="true">
+<Column id="106" name="COD_CAMPO" type="varchar" length="6" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del campo</CP>
 </Column>
-<Column id="110" name="VAL_CAMPO" type="text" length="25" nulls="true">
+<Column id="107" name="VAL_CAMPO" type="text" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Valor del campo</CP>
 </Column>
-<Column id="111" name="COD_USUREGIS" type="varchar" length="25" nulls="true">
+<Column id="108" name="COD_USUREGIS" type="varchar" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="112" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="109" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="113" name="COD_USUMODIF" type="varchar" length="25" nulls="true">
+<Column id="110" name="COD_USUMODIF" type="varchar" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="114" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="111" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -499,44 +548,45 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="115" name="VISTA" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="112" name="VISTA" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla que registra las vistas del documento.</Text>
-<Column id="116" name="NUM_SECVISTA" type="serial" length="25" nulls="true">
+<Column id="113" name="NUM_SECVISTA" type="serial" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero de secuencia autogenerado del identificador de la vista</CP>
 </Column>
-<Column id="117" name="NOM_VISTA" type="varchar" length="500" nulls="true">
+<Column id="114" name="NOM_VISTA" type="varchar" length="500" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre de la vista</CP>
 </Column>
-<Column id="118" name="FEC_PUBLICACION" type="timestamp" length="25" nulls="true">
+<Column id="115" name="FEC_PUBLICACION" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'::timestamp without time zone</CP>
 <CP name="COMMENTS">Fecha de publicacion</CP>
 </Column>
-<Column id="119" name="IND_INDICE" type="boolean" length="25" nulls="true">
+<Column id="116" name="IND_INDICE" type="boolean" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">false</CP>
 <CP name="COMMENTS">Indicador de generacion del indice de una vista</CP>
 </Column>
-<Column id="120" name="COD_ESTADOVISTA" type="varchar" length="2" nulls="true">
+<Column id="117" name="COD_ESTADOVISTA" type="varchar" length="2" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Estado de la vista  CATALOGO XYZ (Publicado, Generado, Bloqueado para q no se modifique)</CP>
 </Column>
-<Column id="121" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="true">
+<Column id="118" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero de secuencia del identificador del documento</CP>
 </Column>
-<Column id="122" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="119" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="123" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="120" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="124" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="121" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="125" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="122" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -552,44 +602,37 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="126" name="COMPONENTE" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="123" name="COMPONENTE" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla que registra los componentes de la vista</Text>
-<Column id="127" name="NUM_SECVISTA" type="integer" length="25" nulls="true">
+<Column id="124" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero identificador de la vista</CP>
 </Column>
-<Column id="128" name="NUM_SECCOMP" type="smallint" length="25" nulls="true">
+<Column id="125" name="NUM_SECCOMP" type="smallint" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero consecutivo generado por el sistema con el pattron (Maximo + 1)</CP>
 </Column>
-<Column id="129" name="COD_TIPOCOMP" type="varchar" length="3" nulls="true">
+<Column id="126" name="COD_TIPOCOMP" type="varchar" length="3" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
-<CP name="COMMENTS">Codigo del tipo de componente VISTA o RECURSO2</CP>
+<CP name="COMMENTS">Codigo del tipo de componente VIS-VISTA o REC-RECURSO</CP>
 </Column>
-<Column id="130" name="NUM_ORDEN" type="integer" length="25" nulls="true">
+<Column id="127" name="NUM_ORDEN" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero para ordenar los componentes en la vista</CP>
 </Column>
-<Column id="131" name="NUM_SECVISTA_COMP" type="integer" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">0</CP>
-<CP name="COMMENTS">Numero indentificador del componente vista</CP>
-</Column>
-<Column id="132" name="NUM_SECDOCUMENTO_COMP" type="integer" length="25" nulls="true"/>
-<Column id="133" name="NUM_SECRECURSO_COMP" type="smallint" length="25" nulls="true"/>
-<Column id="134" name="NUM_SECVERSION_COMP" type="smallint" length="25" nulls="true"/>
-<Column id="135" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="128" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="136" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="129" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="137" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="130" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="138" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="131" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -605,36 +648,37 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="139" name="VERSION_RECURSO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Table id="132" name="VERSION_RECURSO" schema="CMS" database="SMARTLEX_BD" background="16777165">
 <Text>Tabla que registra las versiones del recurso</Text>
-<Column id="140" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="true">
+<Column id="133" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero identificador del documento</CP>
 </Column>
-<Column id="141" name="NUM_SECRECURSO" type="smallint" length="25" nulls="true">
+<Column id="134" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero identificador del recurso</CP>
 </Column>
-<Column id="142" name="NUM_SECVERSION" type="smallint" length="25" nulls="true">
+<Column id="135" name="NUM_SECVERSION" type="smallint" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero consecutivo generado por el sistema con el pattron (Maximo + 1)</CP>
 </Column>
-<Column id="143" name="NOM_VERSION" type="varchar" length="100" nulls="true">
+<Column id="136" name="NOM_VERSION" type="varchar" length="100" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Nombre de la version</CP>
 </Column>
-<Column id="144" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
+<Column id="137" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo del usuario que registra</CP>
 </Column>
-<Column id="145" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
+<Column id="138" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de registro</CP>
 </Column>
-<Column id="146" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
+<Column id="139" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
 <CP name="DEFAULT_VALUE">' '</CP>
 <CP name="COMMENTS">Codigo de usuario que modifica</CP>
 </Column>
-<Column id="147" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
+<Column id="140" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">current_timestamp</CP>
 <CP name="COMMENTS">Fecha de modificacion</CP>
 </Column>
@@ -650,87 +694,137 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Table id="148" name="RECURSO_REF" schema="CMS" database="SMARTLEX_BD" background="16777165">
-<Column id="149" name="NUM_SECREF" type="integer" length="25" nulls="true"/>
-<Column id="150" name="NUM_SECRECURSO_TARGET" type="integer" length="25" nulls="true"/>
-<Column id="151" name="NUM_SECVERSION_TARGET" type="integer" length="25" nulls="true"/>
-<Column id="152" name="COD_USUREGIS" type="varchar" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">' '</CP>
-<CP name="COMMENTS">Codigo del usuario que registra</CP>
-</Column>
-<Column id="153" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">current_timestamp</CP>
-<CP name="COMMENTS">Fecha de registro</CP>
-</Column>
-<Column id="154" name="COD_USUMODIF" type="varchar" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">' '</CP>
-<CP name="COMMENTS">Codigo de usuario que modifica</CP>
-</Column>
-<Column id="155" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">current_timestamp</CP>
-<CP name="COMMENTS">Fecha de modificacion</CP>
-</Column>
-<Storage name="transferTable" value="false"/>
-<Storage name="ValueCompression" value="false"/>
-<Storage name="DistributeRandom" value="false"/>
-<Storage name="TempTable" value="false"/>
-<Storage name="Tablespace" value="TS_CMS_DATA"/>
-<Storage name="NoLogging" value="false"/>
-<Storage name="db2zVolatile" value="false"/>
-<Storage name="db2zRestrictOnDrop" value="false"/>
-<Storage name="AppendMode" value="false"/>
-<Storage name="WithCRCols" value="false"/>
-<Storage name="External" value="false"/>
-</Table>
-<Table id="156" name="VISTA_REF" schema="CMS" database="SMARTLEX_BD" background="16777165">
-<Column id="157" name="NUM_SECREF" type="integer" length="25" nulls="true"/>
-<Column id="158" name="NUM_SECVISTA_TARGET" type="integer" length="25" nulls="true"/>
-<Column id="159" name="COD_USUREGIS" type="varchar" length="30" nulls="true">
-<CP name="DEFAULT_VALUE">' '</CP>
-<CP name="COMMENTS">Codigo del usuario que registra</CP>
-</Column>
-<Column id="160" name="FEC_REGIS" type="timestamp" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">current_timestamp</CP>
-<CP name="COMMENTS">Fecha de registro</CP>
-</Column>
-<Column id="161" name="COD_USUMODIF" type="varchar" length="30" nulls="true">
-<CP name="DEFAULT_VALUE">' '</CP>
-<CP name="COMMENTS">Codigo de usuario que modifica</CP>
-</Column>
-<Column id="162" name="FEC_MODIF" type="timestamp" length="25" nulls="true">
-<CP name="DEFAULT_VALUE">current_timestamp</CP>
-<CP name="COMMENTS">Fecha de modificacion</CP>
-</Column>
-<Storage name="transferTable" value="false"/>
-<Storage name="ValueCompression" value="false"/>
-<Storage name="DistributeRandom" value="false"/>
-<Storage name="TempTable" value="false"/>
-<Storage name="Tablespace" value="TS_CMS_DATA"/>
-<Storage name="NoLogging" value="false"/>
-<Storage name="db2zVolatile" value="false"/>
-<Storage name="db2zRestrictOnDrop" value="false"/>
-<Storage name="AppendMode" value="false"/>
-<Storage name="WithCRCols" value="false"/>
-<Storage name="External" value="false"/>
-</Table>
-<Table id="163" name="LINK" schema="CMS" database="SMARTLEX_BD" background="16777165">
-<Column id="164" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="true">
+<Table id="141" name="RECURSO_REF" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra las referencias de un recurso a otro recurso.</Text>
+<Column id="142" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero identificador del documento</CP>
 </Column>
-<Column id="165" name="NUM_SECRECURSO" type="smallint" length="25" nulls="true">
-<CP name="COMMENTS">Numero indentificador del recurso</CP>
+<Column id="143" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador del recurso</CP>
 </Column>
-<Column id="166" name="NUM_SECVERSION" type="smallint" length="25" nulls="true">
+<Column id="144" name="NUM_SECVERSION" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero indentificador de la version</CP>
 </Column>
-<Column id="167" name="NUM_SECCAMPO" type="smallint" length="25" nulls="true">
+<Column id="145" name="NUM_SECREF" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la referencia</CP>
+</Column>
+<Column id="146" name="NUM_SECDOCUMENTO_REF" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del documento TARGET</CP>
+</Column>
+<Column id="147" name="NUM_SECRECURSO_REF" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del recurso TARGET</CP>
+</Column>
+<Column id="148" name="NUM_SECVERSION_REF" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la version TARGET</CP>
+</Column>
+<Column id="149" name="COD_USUREGIS" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="150" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="151" name="COD_USUMODIF" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="152" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CMS_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="153" name="VISTA_REF" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra las referencias de un recurso a una vista.</Text>
+<Column id="154" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del documento</CP>
+</Column>
+<Column id="155" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del recurso</CP>
+</Column>
+<Column id="156" name="NUM_SECVERSION" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la version</CP>
+</Column>
+<Column id="157" name="NUM_SECREF" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la referencia</CP>
+</Column>
+<Column id="158" name="NUM_SECVISTA_REF" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la vista TARGET</CP>
+</Column>
+<Column id="159" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="160" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="161" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="162" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CMS_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="163" name="LINK_EXTERNO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Column id="164" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador del documento</CP>
+</Column>
+<Column id="165" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del recurso</CP>
+</Column>
+<Column id="166" name="NUM_SECVERSION" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la version</CP>
+</Column>
+<Column id="167" name="NUM_SECCAMPO" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero indetificador del campo</CP>
 </Column>
-<Column id="168" name="NUM_SECLINK" type="smallint" length="25" nulls="true">
+<Column id="168" name="NUM_SECLINK" type="smallint" length="25" nulls="false">
 <CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero consecutivo generado por el sistema con el pattron (Maximo + 1)</CP>
 </Column>
-<Column id="169" name="NUM_SECARCHIVO" type="integer" length="25" nulls="true">
+<Column id="169" name="NUM_SECARCHIVO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
 <CP name="COMMENTS">Numero indentificador del archivo</CP>
 </Column>
 <Storage name="transferTable" value="false"/>
@@ -745,21 +839,442 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <Storage name="WithCRCols" value="false"/>
 <Storage name="External" value="false"/>
 </Table>
-<Relation id="170" name="FK01_DOCUMENTO_RECURSOS" cardinality="-2" identifying="true" nulls="false">
+<Table id="170" name="VISTA_COMP" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los componentes del tipo vista.</Text>
+<Column id="171" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la vista</CP>
+</Column>
+<Column id="172" name="NUM_SECCOMP" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del componente</CP>
+</Column>
+<Column id="173" name="NUM_SECVISTA_COMP" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la vista TARGET</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CMS_PK"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="174" name="RECURSO_COMP" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los componentes del tipo recurso.</Text>
+<Column id="175" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la vista</CP>
+</Column>
+<Column id="176" name="NUM_SECCOMP" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador del componente</CP>
+</Column>
+<Column id="177" name="NUM_SECDOCUMENTO_COMP" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indenficador del documento TARGET</CP>
+</Column>
+<Column id="178" name="NUM_SECRECURSO_COMP" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del recurso TARGET</CP>
+</Column>
+<Column id="179" name="NUM_SECVERSION_COMP" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la version TARGET</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CMS_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="180" name="LINK_ARCHIVO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Column id="181" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la vista</CP>
+</Column>
+<Column id="182" name="NUM_SECLINK" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero consecutivo generado por el sistema con el pattron (Maximo + 1)</CP>
+</Column>
+<Column id="183" name="NUM_SECARCHIVO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del archivo</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CMS_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="184" name="LINK_CSS" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Column id="185" name="COD_REPOSITORIO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del repositorio</CP>
+</Column>
+<Column id="186" name="NUM_SECARCHIVO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del archivo</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CMS_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="187" name="CAB_CATALOGO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Catalogos</Text>
+<Column id="188" name="COD_CABCAT" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del Catalogo</CP>
+</Column>
+<Column id="189" name="FEC_INICABCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Catalogo</CP>
+</Column>
+<Column id="190" name="FEC_FINCABCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Catalogo</CP>
+</Column>
+<Column id="191" name="DES_CABCAT" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Catalogo</CP>
+</Column>
+<Column id="192" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="193" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="194" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="195" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CATALOGO_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="196" name="DET_CATALOGO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Data de Catalogos</Text>
+<Column id="197" name="COD_CABCAT" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del Catalogo</CP>
+</Column>
+<Column id="198" name="FEC_INICABCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Catalogo</CP>
+</Column>
+<Column id="199" name="COD_DETCAT" type="varchar" length="10" nulls="false">
+<CP name="COMMENTS">Codigo del Registro del Catalogo</CP>
+</Column>
+<Column id="200" name="FEC_INIDETCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Data de Catalogo</CP>
+</Column>
+<Column id="201" name="FEC_FINDETCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Data de Catalogo</CP>
+</Column>
+<Column id="202" name="DES_DETCAT" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Catalogo</CP>
+</Column>
+<Column id="203" name="DES_CORTA" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion Corta</CP>
+</Column>
+<Column id="204" name="DES_ACRONIMO" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Acronimo</CP>
+</Column>
+<Column id="205" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="206" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="207" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="208" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CATALOGO_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="209" name="CAB_GRUPO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Grupos del Catalogo</Text>
+<Column id="210" name="COD_CABGRUPO" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de Grupo</CP>
+</Column>
+<Column id="211" name="FEC_INICABGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Grupo</CP>
+</Column>
+<Column id="212" name="FEC_FINCABGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Grupo</CP>
+</Column>
+<Column id="213" name="DES_GRUPO" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Grupo</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CATALOGO_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="214" name="CAB_ASOCIACION" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Asociación de Catálogos</Text>
+<Column id="215" name="COD_CABASOC" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de asociacion de catalogos</CP>
+</Column>
+<Column id="216" name="FEC_INICABASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time </CP>
+<CP name="COMMENTS">Fecha de inicio de vigencia de la asociacion</CP>
+</Column>
+<Column id="217" name="FEC_FINCABASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'::timestamp without time </CP>
+<CP name="COMMENTS">Fecha fin de vigencia de la asociacion</CP>
+</Column>
+<Column id="218" name="DES_ASOCIACION" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion de la asociacion de catalogos</CP>
+</Column>
+<Column id="219" name="COD_CABCAT" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del catalogo origen</CP>
+</Column>
+<Column id="220" name="COD_CABCAT_ASOC" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del catalogo con la que se asocia el catalogo origen</CP>
+</Column>
+<Column id="221" name="COD_USUREGIS" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="222" name="FEC_REGIS" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="223" name="COD_USUMODIF" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="224" name="FEC_MODIF" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CATALOGO_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="225" name="DET_ASOCIACION" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla para determinar asociaciones entre registros de DATACATALOGO</Text>
+<Column id="226" name="COD_CABASOC" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de la asociacion de catalogos</CP>
+</Column>
+<Column id="227" name="FEC_INICABASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time </CP>
+<CP name="COMMENTS">Fecha de inicio de asociacion de catalogos</CP>
+</Column>
+<Column id="228" name="COD_CABCAT" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de catalogo origen</CP>
+</Column>
+<Column id="229" name="COD_DETCAT" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo detalle del catalogo de origen</CP>
+</Column>
+<Column id="230" name="COD_CABCAT_ASOC" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de catalogo del catalogo asociado</CP>
+</Column>
+<Column id="231" name="COD_DETCAT_ASOC" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo detalle del catalogo asociado</CP>
+</Column>
+<Column id="232" name="FEC_INIDETASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time </CP>
+<CP name="COMMENTS">Fecha de inicio de vigencia del detalle de la asociacion</CP>
+</Column>
+<Column id="233" name="FEC_INIDETCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time </CP>
+<CP name="COMMENTS">Fecha de inidicio de vigencia del detalle de catalogo</CP>
+</Column>
+<Column id="234" name="FEC_FINDETASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'::timestamp without time </CP>
+<CP name="COMMENTS">Fecha de fin de vigencia del detalle de la asociacion</CP>
+</Column>
+<Column id="235" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="236" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="237" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="238" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CATALOGO_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="239" name="DET_GRUPO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Data de Grupos del Catalogo</Text>
+<Column id="240" name="COD_CABGRUPO" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de Grupo</CP>
+</Column>
+<Column id="241" name="FEC_INICABGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Grupo</CP>
+</Column>
+<Column id="242" name="COD_CABCAT" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de Catalogo</CP>
+</Column>
+<Column id="243" name="COD_DETCAT" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del Registro del Catalogo</CP>
+</Column>
+<Column id="244" name="FEC_INIDETCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Data del Catalogo</CP>
+</Column>
+<Column id="245" name="FEC_INIDETGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Data de Grupo</CP>
+</Column>
+<Column id="246" name="FEC_FINDETGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'::timestamp without time zone</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Data de Grupo</CP>
+</Column>
+<Column id="247" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="248" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="249" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="250" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="Tablespace" value="TS_CATALOGO_DATA"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Relation id="251" name="FK01_RECURSO_TO_DOCUMENTO" cardinality="-2" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>42</FK>
-<PK>33</PK>
+<FK>41</FK>
+<PK>32</PK>
 <Text/>
 </Relation>
-<Relation id="171" name="FK02_DOCUMENTO_VISTAS" cardinality="-2" identifying="true" nulls="false">
+<Relation id="252" name="FK01_VISTA_TO_DOCUMENTO" cardinality="-2" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>42</FK>
-<PK>121</PK>
+<FK>41</FK>
+<PK>118</PK>
 <Text/>
 </Relation>
-<Relation id="172" name="FK01_ESTRUCTURA_DETALLE" cardinality="-2" identifying="true" nulls="false">
+<Relation id="253" name="FK01_DET_ESTRUCTURADOC_TO_CAB_ESTRUCTURADOC" cardinality="-2" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
 <FK>1</FK>
@@ -768,107 +1283,246 @@ como archivos css,word,pdf,html,json. etc.</Text>
 <PK>15</PK>
 <Text/>
 </Relation>
-<Relation id="173" name="FK01_FOLDER_ACCESOS_DIRECTOS" cardinality="-1" identifying="false" nulls="false">
+<Relation id="254" name="FK02_ACCESOS_DIRECTO_TO_FOLDER" cardinality="-1" identifying="false" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>70</FK>
-<PK>79</PK>
+<FK>67</FK>
+<PK>76</PK>
 <Text/>
 </Relation>
-<Relation id="174" name="REL_RECURSO_REF" cardinality="-2" identifying="false" nulls="false">
-<FK>94</FK>
-<PK>149</PK>
-</Relation>
-<Relation id="175" name="REL_RECURSO_REFERENCIAS" cardinality="-2" identifying="false" nulls="false">
-<FK>142</FK>
-<FK>141</FK>
-<PK>94</PK>
-</Relation>
-<Relation id="176" name="FK01_RECURSO_VERSIONES" cardinality="-2" identifying="true" nulls="false">
+<Relation id="255" name="FK01_RECURSO_REF_TO_REFERENCIA" cardinality="1" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>34</FK>
+<FK>91</FK>
+<FK>92</FK>
+<FK>93</FK>
+<PK>142</PK>
+<PK>143</PK>
+<PK>144</PK>
+<Text/>
+</Relation>
+<Relation id="256" name="FK01_REFERENCIA_TO_VERSION_RECURSO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>133</FK>
+<FK>134</FK>
+<FK>135</FK>
+<PK>91</PK>
+<PK>92</PK>
+<PK>93</PK>
+<Text/>
+</Relation>
+<Relation id="257" name="FK01_VERSION_RECURSO_TO_RECURSO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>32</FK>
 <FK>33</FK>
-<PK>141</PK>
-<PK>140</PK>
+<PK>133</PK>
+<PK>134</PK>
 <Text/>
 </Relation>
-<Relation id="177" name="FK01_REPOSITORIO_DOCUMENTOS" cardinality="-2" identifying="true" nulls="false">
+<Relation id="258" name="FK01_DOCUMENTO_TO_REPOSITORIO" cardinality="1" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>51</FK>
-<PK>45</PK>
+<FK>50</FK>
+<PK>44</PK>
 <Text/>
 </Relation>
-<Relation id="178" name="FK01_VERSION_RECURSO_CAMPOS" cardinality="-2" identifying="true" nulls="false">
+<Relation id="259" name="FK01_CAMPO_TO_VERSION_RECURSO" cardinality="-2" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>140</FK>
-<FK>141</FK>
-<FK>142</FK>
-<PK>105</PK>
-<PK>106</PK>
-<PK>107</PK>
+<FK>133</FK>
+<FK>134</FK>
+<FK>135</FK>
+<PK>102</PK>
+<PK>103</PK>
+<PK>104</PK>
 <Text/>
 </Relation>
-<Relation id="179" name="FK02_VISTA_COMPONENTES" cardinality="-2" identifying="true" nulls="false">
+<Relation id="260" name="FK01_COMPONENTE_TO_VISTA" cardinality="-2" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>116</FK>
-<PK>127</PK>
+<FK>113</FK>
+<PK>124</PK>
 <Text/>
 </Relation>
-<Relation id="180" name="REL_VISTA_REF" cardinality="-2" identifying="false" nulls="false">
-<FK>94</FK>
-<PK>157</PK>
-</Relation>
-<Relation id="181" name="FK03L_VISTA_ACCESOS_DIRECTOS" cardinality="-1" identifying="false" nulls="false">
+<Relation id="261" name="FK01_VISTA_REF_TO_REFERENCIA" cardinality="1" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>116</FK>
-<PK>78</PK>
+<FK>91</FK>
+<FK>92</FK>
+<FK>93</FK>
+<PK>154</PK>
+<PK>155</PK>
+<PK>156</PK>
 <Text/>
 </Relation>
-<Relation id="182" name="FK01_LINK_ARCHIVOS" cardinality="-1" identifying="false" nulls="false">
-<FK>106</FK>
-<FK>107</FK>
-<FK>108</FK>
+<Relation id="262" name="FK01_ACCESOS_DIRECTO_TO_VISTA" cardinality="-1" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>113</FK>
+<PK>75</PK>
+<Text/>
+</Relation>
+<Relation id="263" name="FK01_LINK_TO_CAMPO" cardinality="-1" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>102</FK>
+<FK>103</FK>
+<FK>104</FK>
 <FK>105</FK>
+<PK>164</PK>
 <PK>165</PK>
 <PK>166</PK>
 <PK>167</PK>
-<PK>164</PK>
 <Text/>
 </Relation>
-<Relation id="183" name="FK01_LINK_ARCHIVO" cardinality="1" identifying="true" nulls="false">
+<Relation id="264" name="FK02_LINK_TO_ARCHIVO" cardinality="1" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>169</FK>
-<PK>59</PK>
+<FK>57</FK>
+<PK>169</PK>
 <Text/>
 </Relation>
-<Relation id="184" name="FK02_REPOSITORIO_ESTRUCTURA" cardinality="1" identifying="true" nulls="false">
+<Relation id="265" name="FK01_CAB_ESTRUCTURADOC_TO_REPOSITORIO" cardinality="-2" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>51</FK>
+<FK>50</FK>
 <PK>1</PK>
 <Text/>
 </Relation>
-<Relation id="185" name="FK03_REPOSITORIO_ARCHIVOCSS" cardinality="1" identifying="false" nulls="false">
+<Relation id="266" name="FK01_RECURSO_COMP_TO_COMPONENTE" cardinality="1" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>53</FK>
-<PK>59</PK>
+<FK>124</FK>
+<FK>125</FK>
+<PK>175</PK>
+<PK>176</PK>
 <Text/>
 </Relation>
-<Relation id="186" name="FK01_VISTA_ARCHIVOS" cardinality="-2" identifying="false" nulls="false">
+<Relation id="267" name="FK01_VISTA_COMP_TO_COMPONENTE" cardinality="1" identifying="true" nulls="false">
 <Option name="onDelete" class="String" value="RESTRICT"/>
 <Option name="onUpdate" class="String" value="RESTRICT"/>
-<FK>116</FK>
-<PK>64</PK>
+<FK>124</FK>
+<FK>125</FK>
+<PK>171</PK>
+<PK>172</PK>
 <Text/>
 </Relation>
-<Note id="187">
+<Relation id="268" name="FK02_RECURSO_COMP_TO_VERSION_RECURSO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>133</FK>
+<FK>134</FK>
+<FK>135</FK>
+<PK>177</PK>
+<PK>178</PK>
+<PK>179</PK>
+<Text/>
+</Relation>
+<Relation id="269" name="FK02_VISTA_COMP_TO_VISTA" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>113</FK>
+<PK>173</PK>
+<Text/>
+</Relation>
+<Relation id="270" name="FK01_REPO_CSS_TO_REPOSITORIO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>50</FK>
+<PK>185</PK>
+<Text/>
+</Relation>
+<Relation id="271" name="FK02_REPO_CSS_TO_ARCHIVO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>57</FK>
+<PK>186</PK>
+<Text/>
+</Relation>
+<Relation id="272" name="FK01_LINK_ARCHIVO_TO_VISTA" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>113</FK>
+<PK>181</PK>
+<Text/>
+</Relation>
+<Relation id="273" name="FK02_LINK_ARCHIVO_TO_ARCHIVO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>57</FK>
+<PK>183</PK>
+<Text/>
+</Relation>
+<Relation id="274" name="FK02_VISTA_REF_VISTA" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>113</FK>
+<PK>158</PK>
+<Text/>
+</Relation>
+<Relation id="275" name="FK02_RECURSO_REF_TO_VERSION_RECURSO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>133</FK>
+<FK>134</FK>
+<FK>135</FK>
+<PK>146</PK>
+<PK>147</PK>
+<PK>148</PK>
+<Text/>
+</Relation>
+<Relation id="276" name="FK01_DET_CATALOGO_TO_CAB_CATALOGO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>188</FK>
+<FK>189</FK>
+<PK>197</PK>
+<PK>198</PK>
+<Text/>
+</Relation>
+<Relation id="277" name="FK02_DET_GRUPO_TO_CAB_GRUPO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>210</FK>
+<FK>211</FK>
+<PK>240</PK>
+<PK>241</PK>
+<Text/>
+</Relation>
+<Relation id="278" name="FK01_DET_ASOCIACION_TO_CAB_ASOCIACION" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>215</FK>
+<FK>216</FK>
+<PK>226</PK>
+<PK>227</PK>
+<Text/>
+</Relation>
+<Relation id="279" name="FK01_DET_GRUPO_TO_DET_CATALOGO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>242</FK>
+<FK>243</FK>
+<FK>244</FK>
+<PK>197</PK>
+<PK>199</PK>
+<PK>200</PK>
+<Text/>
+</Relation>
+<Relation id="280" name="FK02_DET_ASOCIACION_TO_DET_CATALOGO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>228</FK>
+<FK>229</FK>
+<FK>233</FK>
+<PK>197</PK>
+<PK>199</PK>
+<PK>200</PK>
+<Text/>
+</Relation>
+<Note id="281">
 <Text>CREAR RECURSO AUTOMATICO INDICE APRA TODAS LAS VISTAS
 Atributos multivalor
 ejemplo Materias Keywords
@@ -898,17 +1552,17 @@ D1            D1                      D1
 +-R3(BAJA)    +-R4 (NUEVO)            +-R4' (MODIFICADO)  
 </Text>
 </Note>
-<Note id="188">
+<Note id="282">
 <Text>EL DOCUMENTO VA TENER TODOS LOS RECURSOS DE DIFERENTES VISTAS
 VISTA ORIGINAL Y LAS DEMAS</Text>
 </Note>
-<Note id="189">
+<Note id="283">
 <Text>SE GENERAN 3 RECURSOS AUTOMATICOS:
 IDENTIFICADOR
 REFERENCIA
 POPUP</Text>
 </Note>
-<Note id="190">
+<Note id="284">
 <Text>ENBASE A LOS VALOR DE LOS SCSS REGISTRADOS EN ESTILOSCSS
 SE GENRA UN ARCHIVO CSS PUBLICADO EN EL SERVIDOR DE DOCUMENTOS
 EJEMPLO LEGISLACION.CSS</Text>
@@ -924,70 +1578,78 @@ EJEMPLO LEGISLACION.CSS</Text>
 <ConstraintColumn id="15"/>
 <ConstraintColumn id="16"/>
 </Constraint>
-<Constraint table="32" name="PK_RECURSO" type="PrimKey">
+<Constraint table="31" name="PK_RECURSO" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
+<ConstraintColumn id="32"/>
 <ConstraintColumn id="33"/>
-<ConstraintColumn id="34"/>
 </Constraint>
-<Constraint table="41" name="PK_DOCUMENTO" type="PrimKey">
+<Constraint table="40" name="PK_DOCUMENTO" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="42"/>
+<ConstraintColumn id="41"/>
 </Constraint>
-<Constraint table="50" name="PK_REPOSITORIO" type="PrimKey">
+<Constraint table="49" name="PK_REPOSITORIO" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="51"/>
+<ConstraintColumn id="50"/>
 </Constraint>
-<Constraint table="58" name="PK_ARCHIVO" type="PrimKey">
+<Constraint table="56" name="PK_ARCHIVO" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="59"/>
+<ConstraintColumn id="57"/>
 </Constraint>
-<Constraint table="69" name="PK_FOLDER" type="PrimKey">
+<Constraint table="66" name="PK_FOLDER" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="70"/>
+<ConstraintColumn id="67"/>
 </Constraint>
-<Constraint table="77" name="PK_FOLDER_DOCUMENTO" type="PrimKey">
+<Constraint table="74" name="PK_FOLDER_DOCUMENTO" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="78"/>
-<ConstraintColumn id="79"/>
+<ConstraintColumn id="75"/>
+<ConstraintColumn id="76"/>
 </Constraint>
-<Constraint table="93" name="PK_REFERENCIA" type="PrimKey">
+<Constraint table="90" name="PK_REFERENCIA" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
+<ConstraintColumn id="91"/>
+<ConstraintColumn id="92"/>
+<ConstraintColumn id="93"/>
 <ConstraintColumn id="94"/>
 </Constraint>
-<Constraint table="104" name="PK_ATRIBUTO" type="PrimKey">
+<Constraint table="90" name="CHECK_COD_TIPOREF" type="Check" condition="COD_TIPOREF IN ('VIS','REC')"/>
+<Constraint table="101" name="PK_ATRIBUTO" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
+<ConstraintColumn id="102"/>
+<ConstraintColumn id="103"/>
+<ConstraintColumn id="104"/>
 <ConstraintColumn id="105"/>
-<ConstraintColumn id="106"/>
-<ConstraintColumn id="107"/>
-<ConstraintColumn id="108"/>
 </Constraint>
-<Constraint table="115" name="PK_VISTA" type="PrimKey">
+<Constraint table="112" name="PK_VISTA" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="116"/>
+<ConstraintColumn id="113"/>
 </Constraint>
-<Constraint table="126" name="PK_COMPOSICION" type="PrimKey">
+<Constraint table="123" name="PK_COMPOSICION" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="127"/>
-<ConstraintColumn id="128"/>
+<ConstraintColumn id="124"/>
+<ConstraintColumn id="125"/>
 </Constraint>
-<Constraint table="139" name="PK_RECURSO_VERSION" type="PrimKey">
+<Constraint table="123" name="CHECK_COD_TIPOCOMP" type="Check" condition="COD_TIPOCOMP IN ('VIS','REC')"/>
+<Constraint table="132" name="PK_RECURSO_VERSION" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="140"/>
-<ConstraintColumn id="141"/>
+<ConstraintColumn id="133"/>
+<ConstraintColumn id="134"/>
+<ConstraintColumn id="135"/>
+</Constraint>
+<Constraint table="141" name="PK_RECURSO_REF" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CMS_PK"/>
 <ConstraintColumn id="142"/>
+<ConstraintColumn id="143"/>
+<ConstraintColumn id="144"/>
+<ConstraintColumn id="145"/>
 </Constraint>
-<Constraint table="148" name="PK_RECURSO_TARGET" type="PrimKey">
+<Constraint table="153" name="PK_VISTA_REF" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
-<ConstraintColumn id="149"/>
-<ConstraintColumn id="150"/>
-<ConstraintColumn id="151"/>
-</Constraint>
-<Constraint table="156" name="PK_VISTA_TARGET" type="PrimKey">
-<Option name="tablespace" class="String" value="TS_CMS_PK"/>
+<ConstraintColumn id="154"/>
+<ConstraintColumn id="155"/>
+<ConstraintColumn id="156"/>
 <ConstraintColumn id="157"/>
-<ConstraintColumn id="158"/>
 </Constraint>
-<Constraint table="163" name="PK_LINK_ARCHIVO" type="PrimKey">
+<Constraint table="163" name="PK_LINK_EXTERNO" type="PrimKey">
 <Option name="tablespace" class="String" value="TS_CMS_PK"/>
 <ConstraintColumn id="164"/>
 <ConstraintColumn id="165"/>
@@ -995,46 +1657,128 @@ EJEMPLO LEGISLACION.CSS</Text>
 <ConstraintColumn id="167"/>
 <ConstraintColumn id="168"/>
 </Constraint>
-<Sheet name="Untitled 1" id="191" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
-<Place id="190" visible="true">750,80,171,110</Place>
-<Place id="178" visible="true">500,0,0,0</Place>
-<Place id="177" visible="true">500,0,0,0</Place>
-<Place id="186" visible="true">500,0,0,0</Place>
-<Place id="41" visible="true">400,968,211,181</Place>
-<Place id="104" visible="true">1199,890,241,231</Place>
-<Place id="69" visible="true">1369,710,211,141</Place>
-<Place id="181" visible="true">500,0,0,0</Place>
-<Place id="180" visible="true">500,0,0,0</Place>
-<Place id="173" visible="true">500,0,0,0</Place>
-<Place id="189" visible="true">350,87,140,74</Place>
-<Place id="175" visible="true">500,0,0,0</Place>
-<Place id="58" visible="true">108,270,220,281</Place>
-<Place id="139" visible="true">968,1219,401,211</Place>
-<Place id="184" visible="true" options="9.818486033910848,929.9759164321474,210.0,211.0,69.55179237314292,1360.2555390840348,240.0,291.0,2,190.0,1140.0,190.0,1360.2555390840348">500,0,0,0</Place>
-<Place id="185" visible="true" options="9.818486033910848,929.9759164321474,210.0,211.0,108.0,270.38711150003087,220.0,281.0,5,150.0,930.0,175.0,930.0,175.0,541.3871115000309,170.0,541.3871115000309,170.0,551.3871115000309">500,0,0,0</Place>
-<Place id="77" visible="true">870,679,231,161</Place>
-<Place id="156" visible="true">1468,1789,191,133</Place>
-<Place id="170" visible="true">500,0,0,0</Place>
-<Place id="115" visible="true">468,479,241,222</Place>
-<Place id="85" visible="true">1860,1208,120,91</Place>
-<Place id="93" visible="true">1118,1559,231,221</Place>
-<Place id="176" visible="true">500,0,0,0</Place>
-<Place id="174" visible="true">500,0,0,0</Place>
-<Place id="171" visible="true" options="400.0,968.4072909660274,211.0,181.0,468.61288849996913,479.90924301695543,241.0,222.0,4,490.0,968.4072909660274,490.0,760.0,580.0,760.0,580.0,701.9092430169554">500,0,0,0</Place>
-<Place id="179" visible="true" options="468.61288849996913,479.90924301695543,241.0,222.0,889.6128884999691,340.0,281.0,261.0,4,710.0,520.0,799.8064442499846,520.0,799.8064442499846,460.0,889.6128884999691,460.0">500,0,0,0</Place>
+<Constraint table="170" name="PK_VISTA_COMP" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CMS_PK"/>
+<ConstraintColumn id="171"/>
+<ConstraintColumn id="172"/>
+</Constraint>
+<Constraint table="174" name="PK_RECURSO_COMP" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CMS_PK"/>
+<ConstraintColumn id="175"/>
+<ConstraintColumn id="176"/>
+</Constraint>
+<Constraint table="180" name="PK_LINK_ARCHIVO" type="PrimKey">
+<ConstraintColumn id="181"/>
+<ConstraintColumn id="182"/>
+<ConstraintColumn id="183"/>
+</Constraint>
+<Constraint table="184" name="PK_REPO_CSS" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CMS_PK"/>
+<ConstraintColumn id="185"/>
+<ConstraintColumn id="186"/>
+</Constraint>
+<Constraint table="187" name="PK_CAB_CATALOGO" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CATALOGO_PK"/>
+<ConstraintColumn id="188"/>
+<ConstraintColumn id="189"/>
+</Constraint>
+<Constraint table="196" name="PK_DET_CATALOGO" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CATALOGO_PK"/>
+<ConstraintColumn id="197"/>
+<ConstraintColumn id="199"/>
+<ConstraintColumn id="200"/>
+</Constraint>
+<Constraint table="209" name="PK_CAB_GRUPO" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CATALOGO_PK"/>
+<ConstraintColumn id="210"/>
+<ConstraintColumn id="211"/>
+</Constraint>
+<Constraint table="214" name="PK_CAB_ASOCIACION" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CATALOGO_PK"/>
+<ConstraintColumn id="215"/>
+<ConstraintColumn id="216"/>
+</Constraint>
+<Constraint table="225" name="PK_DET_ASOCIACION" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CATALOGO_PK"/>
+<ConstraintColumn id="226"/>
+<ConstraintColumn id="228"/>
+<ConstraintColumn id="229"/>
+<ConstraintColumn id="230"/>
+<ConstraintColumn id="231"/>
+<ConstraintColumn id="232"/>
+</Constraint>
+<Constraint table="239" name="PK_DET_GRUPO" type="PrimKey">
+<Option name="tablespace" class="String" value="TS_CATALOGO_PK"/>
+<ConstraintColumn id="240"/>
+<ConstraintColumn id="242"/>
+<ConstraintColumn id="243"/>
+<ConstraintColumn id="245"/>
+</Constraint>
+<Sheet name="Untitled 1" id="285" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true" disp_null="true">
+<Place id="141" visible="true">910,1849,231,251</Place>
+<Place id="275" visible="true" options="968.0,1219.0,401.0,211.0,910.066673415192,1849.794402466059,231.0,251.0,4,990.0,1430.0,990.0,1706.3972012330296,1010.0,1706.3972012330296,1010.0,1849.794402466059">500,0,0,0</Place>
+<Place id="279" visible="true" options="2921.0259873298423,1309.460355750136,290.0,242.0,2529.2971359649755,1899.6768767051822,290.0,271.0,3,3010.0,1551.460355750136,3010.0,2010.0,2819.2971359649755,2010.0">500,0,0,0</Place>
+<Place id="281" visible="true">1941,9,380,391</Place>
+<Place id="187" visible="true">2550,1530,211,211</Place>
+<Place id="259" visible="true" options="968.0,1219.0,401.0,211.0,1258.7036454830143,879.9092430169554,241.0,231.0,3,1150.0,1219.0,1150.0,1000.0,1258.7036454830143,1000.0">500,0,0,0</Place>
+<Place id="180" visible="true">480,299,171,90</Place>
+<Place id="225" visible="true">3110,1910,311,321</Place>
+<Place id="123" visible="true">889,340,281,191</Place>
+<Place id="184" visible="true">60,660,141,81</Place>
+<Place id="82" visible="true">2520,946,120,91</Place>
+<Place id="273" visible="true" options="57.546215084777145,259.90924301695543,220.0,281.0,480.3630279321783,299.90924301695543,171.0,90.0,4,277.0,370.0,378.68151396608914,370.0,378.68151396608914,350.0,480.3630279321783,350.0">500,0,0,0</Place>
+<Place id="262" visible="true" options="458.75013943220915,499.18151396608914,241.0,222.0,870.0,679.0,231.0,161.0,4,699.7501394322092,640.0,790.0,640.0,790.0,690.0,870.0,690.0">500,0,0,0</Place>
+<Place id="56" visible="true">57,259,220,281</Place>
+<Place id="255" visible="true" options="1257.5888049321177,1548.9092430169553,231.0,221.0,910.066673415192,1849.794402466059,231.0,251.0,5,1257.5888049321177,1640.0,1130.0,1640.0,1130.0,1840.0,1130.0,1840.0,1130.0,1850.0">500,0,0,0</Place>
+<Place id="196" visible="true">2529,1899,290,271</Place>
+<Place id="74" visible="true">870,679,231,161</Place>
+<Place id="252" visible="true" options="420.18151396608914,968.0,211.0,181.0,458.75013943220915,499.18151396608914,241.0,222.0,4,510.0,968.0,510.0,760.0,580.0,760.0,580.0,721.1815139660891">500,0,0,0</Place>
+<Place id="267" visible="true" options="889.0,340.0,281.0,191.0,1500.9093442448363,530.0851796946788,250.0,121.0,4,1170.0,480.0,1340.0,480.0,1340.0,540.0,1500.9093442448363,540.0">500,0,0,0</Place>
+<Place id="66" visible="true">1369,710,211,141</Place>
 <Place id="0" visible="true">69,1360,240,291</Place>
-<Place id="126" visible="true">889,340,281,261</Place>
-<Place id="50" visible="true">9,929,210,211</Place>
-<Place id="90" visible="true">1868,1068,120,60</Place>
-<Place id="148" visible="true">840,1809,201,143</Place>
-<Place id="172" visible="true" options="69.55179237314292,1360.2555390840348,240.0,291.0,527.3260153732044,1370.2981289313775,254.0,371.0,4,309.5517923731429,1530.0,450.0,1530.0,450.0,1510.0,527.3260153732044,1510.0">500,0,0,0</Place>
-<Place id="183" visible="true" options="1809.9759164321483,900.2481873812811,231.0,141.0,108.0,270.38711150003087,220.0,281.0,3,1920.0,900.2481873812811,1920.0,300.0,328.0,300.0">500,0,0,0</Place>
-<Place id="187" visible="true">1941,9,471,391</Place>
-<Place id="188" visible="true">509,878,231,62</Place>
-<Place id="32" visible="true">845,906,201,201</Place>
-<Place id="13" visible="true">527,1370,254,371</Place>
-<Place id="182" visible="true" options="1199.1148405508966,890.1815139660891,241.0,231.0,1809.9759164321483,900.2481873812811,231.0,141.0,2,1440.0,940.0,1809.9759164321483,940.0">500,0,0,0</Place>
-<Place id="163" visible="true">1809,900,231,141</Place>
+<Place id="272" visible="true">500,0,0,0</Place>
+<Place id="261" visible="true" options="1257.5888049321177,1548.9092430169553,231.0,221.0,1547.8851594491036,1809.1815139660894,263.0,212.0,5,1488.0,1580.0,1620.0,1580.0,1620.0,1790.0,1630.0,1790.0,1630.0,1809.0">500,0,0,0</Place>
+<Place id="284" visible="true">750,80,171,110</Place>
+<Place id="269" visible="true" options="458.75013943220915,499.18151396608914,241.0,222.0,1500.9093442448363,530.0851796946788,250.0,121.0,4,699.7501394322092,610.0,1234.0,610.0,1234.0,620.0,1501.0,620.0">500,0,0,0</Place>
+<Place id="263" visible="true" options="1258.7036454830143,879.9092430169554,241.0,231.0,1918.3165339829839,900.0,231.0,141.0,2,1499.7036454830143,970.0,1918.3165339829839,970.0">500,0,0,0</Place>
+<Place id="153" visible="true">1547,1809,263,212</Place>
+<Place id="209" visible="true">2480,1278,230,162</Place>
+<Place id="276" visible="true">500,0,0,0</Place>
+<Place id="251" visible="true">500,0,0,0</Place>
+<Place id="49" visible="true">9,918,210,211</Place>
+<Place id="254" visible="true">500,0,0,0</Place>
+<Place id="268" visible="true" options="968.0,1219.0,401.0,211.0,1438.9793640330463,329.54063779641143,261.0,141.0,4,1369.0,1270.0,1780.0,1270.0,1780.0,410.0,1699.0,410.0">500,0,0,0</Place>
+<Place id="112" visible="true">458,499,241,222</Place>
+<Place id="283" visible="true">350,87,140,74</Place>
+<Place id="31" visible="true">845,906,201,201</Place>
+<Place id="277" visible="true">500,0,0,0</Place>
+<Place id="214" visible="true">3270,1459,301,212</Place>
+<Place id="270" visible="true">500,0,0,0</Place>
+<Place id="87" visible="true">2667,1007,120,60</Place>
+<Place id="163" visible="true">1918,900,231,141</Place>
+<Place id="274" visible="true" options="458.75013943220915,499.18151396608914,241.0,222.0,1547.8851594491036,1809.1815139660894,263.0,212.0,5,680.0,721.1815139660891,680.0,1190.0,1870.0,1190.0,1870.0,1910.0,1810.8851594491036,1910.0">500,0,0,0</Place>
+<Place id="265" visible="true">500,0,0,0</Place>
+<Place id="170" visible="true">1500,530,250,121</Place>
+<Place id="101" visible="true">1258,879,241,231</Place>
+<Place id="260" visible="true" options="458.75013943220915,499.18151396608914,241.0,222.0,889.0,340.0,281.0,191.0,3,620.0,499.18151396608914,620.0,430.0,889.0,430.0">500,0,0,0</Place>
+<Place id="282" visible="true">509,878,231,62</Place>
+<Place id="256" visible="true" options="968.0,1219.0,401.0,211.0,1257.5888049321177,1548.9092430169553,231.0,221.0,2,1290.0,1430.0,1290.0,1548.9092430169553">500,0,0,0</Place>
+<Place id="278" visible="true">500,0,0,0</Place>
+<Place id="266" visible="true" options="889.0,340.0,281.0,191.0,1438.9793640330463,329.54063779641143,261.0,141.0,4,1170.0,430.0,1393.0,430.0,1393.0,430.0,1439.0,430.0">500,0,0,0</Place>
+<Place id="239" visible="true">2921,1309,290,242</Place>
+<Place id="132" visible="true">968,1219,401,211</Place>
+<Place id="258" visible="true">500,0,0,0</Place>
+<Place id="253" visible="true" options="69.0,1360.0,240.0,291.0,647.2481873812811,1390.1815139660894,254.0,371.0,4,309.0,1520.0,450.0,1520.0,450.0,1520.0,647.0,1520.0">500,0,0,0</Place>
+<Place id="90" visible="true">1257,1548,231,221</Place>
+<Place id="13" visible="true">647,1390,254,371</Place>
+<Place id="40" visible="true">420,968,211,181</Place>
+<Place id="271" visible="true">500,0,0,0</Place>
+<Place id="264" visible="true" options="57.546215084777145,259.90924301695543,220.0,281.0,1918.3165339829839,900.0,231.0,141.0,7,260.0,259.90924301695543,260.0,240.0,835.0,240.0,835.0,260.0,1850.0,260.0,1850.0,950.0,1918.3165339829839,950.0">500,0,0,0</Place>
+<Place id="280" visible="true">500,0,0,0</Place>
+<Place id="257" visible="true" options="845.0,906.0,201.0,201.0,968.0,1219.0,401.0,211.0,2,990.0,1107.0,990.0,1219.0">500,0,0,0</Place>
+<Place id="174" visible="true">1438,329,261,141</Place>
+<Region background="14614494" foreground="0" text="ESQUEMA CMS">0,0,2321,2121</Region>
+<Region background="13487615" foreground="0" text="ESQUEMA CATALOGO">2470,1130,1171,1111</Region>
 </Sheet>
-<Settings sheet="191" zoom="1.189207115002721"/>
+<Settings sheet="285" zoom="1.0"/>
 </Diagram>
