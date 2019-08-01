@@ -1,9 +1,30 @@
 Link de scrum study.
 https://www.scrumstudy.com/ 
 
-link certificación fundamental
+link certificaciÃ³n fundamental
 https://www.scrumstudy.com/certification/scrum-fundamentals-certified 
 
 
 saludos
 Vladimir 
+CREATE OR REPLACE TRIGGER USADDAIN.tr01i_T4520
+   BEFORE INSERT ON USADDAIN.T4520TMPRECTIOFICI
+   FOR EACH ROW
+BEGIN
+IF USER <>'USWADRTD' THEN
+   :new.fec_regis    := SYSDATE;
+   :new.cod_usuregis := usadtlau.paam.fnusuario;
+   :new.fec_modif    := SYSDATE;
+   :new.cod_usumodif := usadtlau.paam.fnusuario;
+END IF;
+END tr01i_T4520;
+
+CREATE OR REPLACE TRIGGER USADDAIN.tr02u_T4520
+   BEFORE UPDATE ON USADDAIN.T4520TMPRECTIOFICI
+   FOR EACH ROW
+BEGIN
+IF USER <>'USWADRTD' THEN
+   :new.fec_modif     := SYSDATE;
+   :new.cod_usumodif  := usadtlau.paam.fnusuario;
+END IF;
+END tr02u_T4520;
