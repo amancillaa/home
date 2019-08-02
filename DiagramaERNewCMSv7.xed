@@ -1,0 +1,2599 @@
+<?xml version="1.0" encoding="UTF-8"?><Diagram version="1.0" type="POSTGRES" versionMajor="9" versionMinor="6" groupSchema="false" hide_inv="false">
+<Table id="0" name="ESTRUCTURA_RECURSO" schema="CMS" database="SMARTLEX_BD" background="13172735">
+<Text>Tabla donde se registra la estructura de recursos que conforman el documento.</Text>
+<Column id="1" name="COD_ESTRUCTURA" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del repositorio</CP>
+</Column>
+<Column id="2" name="COD_RECURSO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del recurso CATALOGO XYZ</CP>
+</Column>
+<Column id="3" name="NOM_RECURSO" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del recurso</CP>
+</Column>
+<Column id="4" name="COD_TIPORECURSO" type="char" length="1" nulls="false">
+<CP name="DEFAULT_VALUE">'M'</CP>
+<CP name="COMMENTS">Codigo que identifica el tipo de recurso M-Manual, G-Generado por el sistema</CP>
+</Column>
+<Column id="5" name="NUM_ORDEN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero de orden del recurso</CP>
+</Column>
+<Column id="6" name="NUM_CANTMIN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Cantidad minima del recurso en el documento</CP>
+</Column>
+<Column id="7" name="NUM_CANTMAX" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Cantidad Max del recurso en el documento</CP>
+</Column>
+<Column id="8" name="IND_REQUERIDO" type="boolean" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indicador de que es necesario registrar el recurso en todos los documentos</CP>
+</Column>
+<Column id="9" name="NOM_CSSCLASS" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del atributo CLASS generado para el maquetado CSS</CP>
+</Column>
+<Column id="10" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="11" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="12" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="13" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="14" name="ESTRUCTURA_CAMPO" schema="CMS" database="SMARTLEX_BD" background="13172735">
+<Text>Tabla donde se registra el detalle los campos que conforman el recurso.</Text>
+<Column id="15" name="COD_ESTRUCTURA" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador del repositoriio</CP>
+</Column>
+<Column id="16" name="COD_RECURSO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Identificador del recurso</CP>
+</Column>
+<Column id="17" name="COD_CAMPO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Identificador del campo CATALOGO XYZ</CP>
+</Column>
+<Column id="18" name="NOM_CAMPO" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del campo</CP>
+</Column>
+<Column id="19" name="COD_TIPOCAMPO" type="varchar" length="2" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Catalogo Nro 9999 (NUMBER, COMBO, ETC )</CP>
+</Column>
+<Column id="20" name="NUM_ORDEN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero que indica el orden</CP>
+</Column>
+<Column id="21" name="VAL_CATALOGO" type="varchar" length="4" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Código del catalogo par cargar el tipo de campo COMBO</CP>
+</Column>
+<Column id="22" name="EXP_REGULAR" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Expresión regular para aplicar al valor del campo</CP>
+</Column>
+<Column id="23" name="VAL_MIN" type="numeric" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="PRECISION">15</CP>
+<CP name="SCALE">5</CP>
+<CP name="COMMENTS">Valor del numero minimo para elñ tipo de campo NUMERICO</CP>
+</Column>
+<Column id="24" name="VAL_MAX" type="numeric" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="PRECISION">15</CP>
+<CP name="SCALE">5</CP>
+<CP name="COMMENTS">Valor del numero maximo para elñ tipo de campo NUMERICO</CP>
+</Column>
+<Column id="25" name="IND_REQUERIDO" type="boolean" length="1" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indicador obliga el ingreso del valor del campo</CP>
+</Column>
+<Column id="26" name="IND_BUSCABLE" type="boolean" length="1" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indica que el campo es utilizado para las busquedas</CP>
+</Column>
+<Column id="27" name="IND_VISIBLE" type="boolean" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Inidca que el campo no se visualizar para el cliente ejemplo KEYWORSDS PARA VISUALICE TODA LA DATA SOLO BUSCAR</CP>
+</Column>
+<Column id="28" name="NOM_CSSCLASS" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del CLASS  CSS que identifica al campo</CP>
+</Column>
+<Column id="29" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="30" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="31" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="32" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="33" name="RECURSO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los recursos del documento</Text>
+<Column id="34" name="NUM_SECRECURSO" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador del recurso</CP>
+</Column>
+<Column id="35" name="COD_RECURSO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del recurso CATALOGO XXX</CP>
+</Column>
+<Column id="36" name="NOM_RECURSO" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del recurso</CP>
+</Column>
+<Column id="37" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero de identificador del documento</CP>
+</Column>
+<Column id="38" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="39" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="40" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="41" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="42" name="DOCUMENTO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los documentos.</Text>
+<Column id="43" name="NUM_SECDOCUMENTO" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador del documento</CP>
+</Column>
+<Column id="44" name="VAL_IDENTIFICADOR" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Valor concatenado del recurso IDENTIFICADOR para mejorar las busquedas</CP>
+</Column>
+<Column id="45" name="COD_ESTADODOC" type="varchar" length="2" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del estado del documento CATALOGO XXX (ESTADO COMO GENERADO, TERMINADO, PUBLICADO)</CP>
+</Column>
+<Column id="46" name="COD_ESTRUCTURA" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de identificacion del repositorio</CP>
+</Column>
+<Column id="47" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="48" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="49" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="50" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="51" name="ESTRUCTURA_DOC" schema="CMS" database="SMARTLEX_BD" background="13172735">
+<Text>Tabla donde se registran la estructura del documento referidos a un tema o afinidad.</Text>
+<Column id="52" name="COD_ESTRUCTURA" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de identificacion de la estructura del documento</CP>
+</Column>
+<Column id="53" name="NOM_ESTRUCTURA" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del repositorio</CP>
+</Column>
+<Column id="54" name="COD_CSS" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo que indentifica a la presentacion default para visualizacion</CP>
+</Column>
+<Column id="55" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario de registro</CP>
+</Column>
+<Column id="56" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="57" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario de modificacion</CP>
+</Column>
+<Column id="58" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="59" name="ARCHIVO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registran los datos de los archivos generados por las vistas de los documentos o por lo que genera el repositorio
+como archivos css,word,pdf,html,json. etc.</Text>
+<Column id="60" name="NUM_SECARCHIVO" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador del archivo</CP>
+</Column>
+<Column id="61" name="COD_TIPOARCHIVO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Tipo del documento que se genera CATALOGO 001 (CSS,HTML, XML, JSON, PDF, WORD, etc)</CP>
+</Column>
+<Column id="62" name="NOM_ARCHIVO" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del archivo generado junto con la extension</CP>
+</Column>
+<Column id="63" name="EXP_HASH" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">SHA-1 del documento ejemplo 60c6d277a8bd81de7fdde19201bf9c58a3df08f4</CP>
+</Column>
+<Column id="64" name="DIR_ARCHIVO" type="varchar" length="300" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Direccion del file system del documento</CP>
+</Column>
+<Column id="65" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo usuario que registro</CP>
+</Column>
+<Column id="66" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="67" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario de modificacion</CP>
+</Column>
+<Column id="68" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="69" name="FOLDER" schema="CMS" database="SMARTLEX_BD" background="16763080">
+<Text>Tabla donde se registra carpetas logicas que se crean para clasificar las vistas de los documentos</Text>
+<Column id="70" name="NUM_SECFOLDER" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador de FOLDER</CP>
+</Column>
+<Column id="71" name="NOM_FOLDER" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del folder</CP>
+</Column>
+<Column id="72" name="EXP_PATH" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Expresion de la ruta o ptah del folder /ROOT/MI_CARPETA</CP>
+</Column>
+<Column id="73" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="74" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="75" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="76" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="77" name="ACCESO_DIRECTO" schema="CMS" database="SMARTLEX_BD" background="16763080">
+<Text>Tabla donde se registran la lista de carpetas donde se encuentra una vista logicamente</Text>
+<Column id="78" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la vista</CP>
+</Column>
+<Column id="79" name="NUM_SECFOLDER" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del folder</CP>
+</Column>
+<Column id="80" name="NOM_ACCESODIRECTO" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del acceso directo</CP>
+</Column>
+<Column id="81" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="82" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="83" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="84" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="85" name="REFERENCIA" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra las referencias del recurso</Text>
+<Column id="86" name="NUM_SECREF" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador de la version de la referencia</CP>
+</Column>
+<Column id="87" name="COD_TIPOREF" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del tipo de componente VIS-VISTA o REC-RECURSO</CP>
+</Column>
+<Column id="88" name="NUM_SECVERSION" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la version del recurso</CP>
+</Column>
+<Column id="89" name="COD_MODOREF" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de la forma de presentacion MULTILINK, REFERENCIA, POPUP</CP>
+</Column>
+<Column id="90" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="91" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="92" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="93" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="94" name="CAMPO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los campos que conforman el recurso.</Text>
+<Column id="95" name="NUM_SECCAMPO" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador del campo</CP>
+</Column>
+<Column id="96" name="COD_CAMPO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del campo</CP>
+</Column>
+<Column id="97" name="VAL_CAMPO" type="text" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Valor del campo</CP>
+</Column>
+<Column id="98" name="NUM_SECVERSION" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la version</CP>
+</Column>
+<Column id="99" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador del documento</CP>
+</Column>
+<Column id="100" name="NUM_SECRECURSO" type="smallint" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero de identificacion del recurso</CP>
+</Column>
+<Column id="101" name="COD_USUREGIS" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="102" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="103" name="COD_USUMODIF" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="104" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="105" name="VISTA" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra las vistas del documento.</Text>
+<Column id="106" name="NUM_SECVISTA" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador de la vista</CP>
+</Column>
+<Column id="107" name="NOM_VISTA" type="varchar" length="500" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre de la vista</CP>
+</Column>
+<Column id="108" name="FEC_PUBLICACION" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de publicacion</CP>
+</Column>
+<Column id="109" name="IND_INDICE" type="boolean" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indicador de generacion del indice de una vista</CP>
+</Column>
+<Column id="110" name="COD_ESTADOVISTA" type="varchar" length="2" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Estado de la vista  CATALOGO XYZ (Publicado, Generado, Bloqueado para q no se modifique)</CP>
+</Column>
+<Column id="111" name="NUM_SECDOCUMENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero de secuencia del identificador del documento</CP>
+</Column>
+<Column id="112" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="113" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="114" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="115" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="116" name="COMPONENTE" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los componentes de la vista</Text>
+<Column id="117" name="NUM_SECCOMP" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador del componente</CP>
+</Column>
+<Column id="118" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la vista</CP>
+</Column>
+<Column id="119" name="COD_TIPOCOMP" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del tipo de componente VIS-VISTA o REC-RECURSO</CP>
+</Column>
+<Column id="120" name="NUM_ORDEN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero para ordenar los componentes en la vista</CP>
+</Column>
+<Column id="121" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="122" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="123" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="124" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="125" name="VERSION_RECURSO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra las versiones del recurso</Text>
+<Column id="126" name="NUM_SECVERSION" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero de secuencia autogenerado del identificador de la version del recurso</CP>
+</Column>
+<Column id="127" name="NOM_VERSION" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre de la version</CP>
+</Column>
+<Column id="128" name="NUM_SECRECURSO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador del recurso</CP>
+</Column>
+<Column id="129" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="130" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="131" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="132" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="133" name="RECURSO_REF" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra las referencias de un recurso a otro recurso.</Text>
+<Column id="134" name="NUM_SECREF" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la referencia</CP>
+</Column>
+<Column id="135" name="NUM_SECVERSION_REF" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la version TARGET</CP>
+</Column>
+<Column id="136" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="137" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="138" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="139" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="140" name="VISTA_REF" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra las referencias de un recurso a una vista.</Text>
+<Column id="141" name="NUM_SECREF" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la referencia</CP>
+</Column>
+<Column id="142" name="NUM_SECVISTA_REF" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la vista TARGET</CP>
+</Column>
+<Column id="143" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="144" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="145" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="146" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="147" name="LINK_IMAGEN" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra los archivos (Imagenes, etc) relacionados a un parrafo dentro del campo</Text>
+<Column id="148" name="NUM_SECCAMPO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indetificador del campo</CP>
+</Column>
+<Column id="149" name="NUM_SECARCHIVO_LINK" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del archivo</CP>
+</Column>
+<Column id="150" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="151" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="152" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que modifica</CP>
+</Column>
+<Column id="153" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="154" name="VISTA_COMP" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los componentes del tipo vista.</Text>
+<Column id="155" name="NUM_SECCOMP" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del componente</CP>
+</Column>
+<Column id="156" name="NUM_SECVISTA_COMP" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador de la vista TARGET</CP>
+</Column>
+<Column id="157" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que registra</CP>
+</Column>
+<Column id="158" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="159" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="160" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="161" name="RECURSO_COMP" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los componentes del tipo recurso.</Text>
+<Column id="162" name="NUM_SECCOMP" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identificador del componente</CP>
+</Column>
+<Column id="163" name="NUM_SECVERSION_COMP" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la version TARGET</CP>
+</Column>
+<Column id="164" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que registra</CP>
+</Column>
+<Column id="165" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="166" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="167" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="168" name="LINK_ARCHIVO" schema="CMS" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra los archivos generados desde la vista</Text>
+<Column id="169" name="NUM_SECVISTA" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador de la vista</CP>
+</Column>
+<Column id="170" name="NUM_SECARCHIVO_LINK" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del archivo</CP>
+</Column>
+<Column id="171" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario de registro</CP>
+</Column>
+<Column id="172" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="173" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigto de usuario de modificacion</CP>
+</Column>
+<Column id="174" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="175" name="PRESENTACION" schema="CMS" database="SMARTLEX_BD" background="16763080">
+<Text>Tabla donde se registran el archivo CSS relacionado con el producto y repositorio</Text>
+<Column id="176" name="COD_CSS" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del repositorio</CP>
+</Column>
+<Column id="177" name="NOM_CSS" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del archivo css generado</CP>
+</Column>
+<Column id="178" name="NUM_SECARCHIVO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero indentificador del archivo</CP>
+</Column>
+<Column id="179" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario de registro</CP>
+</Column>
+<Column id="180" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="181" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario modificacion</CP>
+</Column>
+<Column id="182" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="183" name="CATALOGO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Catalogos</Text>
+<Column id="184" name="COD_CATALOGO" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de catalogo</CP>
+</Column>
+<Column id="185" name="FEC_INICAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-01-01 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Catalogo</CP>
+</Column>
+<Column id="186" name="FEC_FINCAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Catalogo</CP>
+</Column>
+<Column id="187" name="DES_CAT" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Catalogo</CP>
+</Column>
+<Column id="188" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="189" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="190" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="191" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="192" name="DATACATALOGO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Data de Catalogos</Text>
+<Column id="193" name="COD_CATALOGO" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de catalogo</CP>
+</Column>
+<Column id="194" name="COD_DATACAT" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del Registro del Catalogo</CP>
+</Column>
+<Column id="195" name="FEC_INIDATACAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-01-01 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Data de Catalogo</CP>
+</Column>
+<Column id="196" name="FEC_FINDATACAT" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Data de Catalogo</CP>
+</Column>
+<Column id="197" name="DES_LARGA" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Catalogo</CP>
+</Column>
+<Column id="198" name="DES_CORTA" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion Corta</CP>
+</Column>
+<Column id="199" name="DES_ACRONIMO" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Acronimo</CP>
+</Column>
+<Column id="200" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="201" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="202" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="203" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="204" name="GRUPO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Grupos del Catalogo</Text>
+<Column id="205" name="COD_GRUPO" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de grupo</CP>
+</Column>
+<Column id="206" name="FEC_INIGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-01-01 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Grupo</CP>
+</Column>
+<Column id="207" name="FEC_FINGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Grupo</CP>
+</Column>
+<Column id="208" name="DES_GRUPO" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion del Grupo</CP>
+</Column>
+<Column id="209" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que registra</CP>
+</Column>
+<Column id="210" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="211" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="212" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="213" name="ASOCIACION" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Asociación de Catálogos</Text>
+<Column id="214" name="COD_ASOCIACION" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de asociacion de catalogos</CP>
+</Column>
+<Column id="215" name="COD_CATALOGO" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">catalogo origen</CP>
+</Column>
+<Column id="216" name="COD_CATALOGO_ASOC" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">catalogo asociado</CP>
+</Column>
+<Column id="217" name="FEC_INIASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-01-01 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de inicio de vigencia de la asociacion</CP>
+</Column>
+<Column id="218" name="FEC_FINASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha fin de vigencia de la asociacion</CP>
+</Column>
+<Column id="219" name="DES_ASOCIACION" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion de la asociacion de catalogos</CP>
+</Column>
+<Column id="220" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="221" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="222" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="223" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="224" name="DATAASOCIACION" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla para determinar asociaciones entre registros de DATACATALOGO</Text>
+<Column id="225" name="COD_ASOCIACION" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador de la asociacion</CP>
+</Column>
+<Column id="226" name="COD_CATALOGO" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de catalogo de origen</CP>
+</Column>
+<Column id="227" name="COD_DATACAT" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del datacatalogo de origen</CP>
+</Column>
+<Column id="228" name="COD_CATALOGO_ASOC" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del catalogo asociado</CP>
+</Column>
+<Column id="229" name="COD_DATACAT_ASOC" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del datacatalogo asociado</CP>
+</Column>
+<Column id="230" name="FEC_INIDATAASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-01-01 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de inicio de vigencia del detalle de la asociacion</CP>
+</Column>
+<Column id="231" name="FEC_FINDATAASOC" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de fin de vigencia del detalle de la asociacion</CP>
+</Column>
+<Column id="232" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="233" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="234" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="235" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="236" name="DATAGRUPO" schema="CATALOGO" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla de Data de Grupos del Catalogo</Text>
+<Column id="237" name="COD_GRUPO" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del grupo</CP>
+</Column>
+<Column id="238" name="COD_CATALOGO" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Catalogo que pertence al grupo</CP>
+</Column>
+<Column id="239" name="COD_DATACAT" type="varchar" length="15" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Datacatalogo que pertence al grupo</CP>
+</Column>
+<Column id="240" name="FEC_INIDATAGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-01-01 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Inicio de Vigencia de Data de Grupo</CP>
+</Column>
+<Column id="241" name="FEC_FINDATAGRUPO" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'9999-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Fin de Vigencia de Data de Grupo</CP>
+</Column>
+<Column id="242" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="243" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="244" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="245" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="246" name="PERFIL" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra los perfiles del usuario</Text>
+<Column id="247" name="COD_PERFIL" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo que identifica al Perfil</CP>
+</Column>
+<Column id="248" name="NOM_PERFIL" type="varchar" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del Perfil</CP>
+</Column>
+<Column id="249" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="250" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="251" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="252" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion </CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="253" name="OPCION" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registran las opciones del Menu</Text>
+<Column id="254" name="COD_MENU" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del menu</CP>
+</Column>
+<Column id="255" name="COD_AGRUPACION" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indetificador de la agrupacion</CP>
+</Column>
+<Column id="256" name="COD_OPCION" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador de la opcion</CP>
+</Column>
+<Column id="257" name="NOM_OPCION" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre de la opcion</CP>
+</Column>
+<Column id="258" name="DES_OPCION" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion detallada de la opcion del menu</CP>
+</Column>
+<Column id="259" name="FEC_INIVIG" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha de inicio de vigencia de la opcion</CP>
+</Column>
+<Column id="260" name="FEC_FINVIG" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha de fin de vigencia de la opcion</CP>
+</Column>
+<Column id="261" name="URL_OPCION" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Url de la opcion para la invocacion</CP>
+</Column>
+<Column id="262" name="NUM_ORDEN" type="integer" length="25" nulls="false">
+<CP name="COMMENTS">Numero de orden para que se muestre en el Menu</CP>
+</Column>
+<Column id="263" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="264" name="FEC_REGIS " type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="265" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="266" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="267" name="GRUPO_OPCION" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registran las agrupaciones o pestañas del menu</Text>
+<Column id="268" name="COD_MENU" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del menu</CP>
+</Column>
+<Column id="269" name="COD_AGRUPACION" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador de la agrupacion o pestaña del menu</CP>
+</Column>
+<Column id="270" name="NOM_AGRUPACION" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre de la agrupacion o pestañla</CP>
+</Column>
+<Column id="271" name="EXP_PATH" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Expresion de la ruta del grupo ejemplo \root\cod_agrupacion1\cod_agrupacion2</CP>
+</Column>
+<Column id="272" name="NUM_ORDEN" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero de Orden</CP>
+</Column>
+<Column id="273" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="274" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="275" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="276" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="277" name="USUARIO" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra la cuenta del usuario</Text>
+<Column id="278" name="COD_USUARIO" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Login del usuario</CP>
+</Column>
+<Column id="279" name="DES_PASSWORD" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">hash de la contraseña del usuario</CP>
+</Column>
+<Column id="280" name="NOM_USUARIO" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del usuario</CP>
+</Column>
+<Column id="281" name="APE_PATERNO" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Apellido Paterno del usuario</CP>
+</Column>
+<Column id="282" name="APE_MATERNO" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Apellido Materno del usuario</CP>
+</Column>
+<Column id="283" name="DES_EMAIL" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Correo personal del usuario</CP>
+</Column>
+<Column id="284" name="COD_CONFIRMACION" type="varchar" length="100" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS"> El código utilizado durante el proceso de confirmación por correo electrónico.</CP>
+</Column>
+<Column id="285" name="FEC_CONFIRMACION" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">'0001-12-31 00:00:00'</CP>
+<CP name="COMMENTS">Fecha de Confirmacion de alta de usuario enviado al correo</CP>
+</Column>
+<Column id="286" name="COD_SISTEMA" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de indentificador del sistema</CP>
+</Column>
+<Column id="287" name="COD_ESTADO" type="varchar" length="2" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Estado de la cuenta de usuario (Activo, Baja, etc)</CP>
+</Column>
+<Column id="288" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="289" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="290" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="291" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="292" name="USUARIO_PEFIL" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra la relacion usuario perfil</Text>
+<Column id="293" name="COD_USUARIO" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo que indentifica al usuario</CP>
+</Column>
+<Column id="294" name="COD_PERFIL" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del perfil</CP>
+</Column>
+<Column id="295" name="FEC_INIPERFIL" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha de inicio del perfil</CP>
+</Column>
+<Column id="296" name="FEC_FINPERFIL" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha Fin del perfil BAJA</CP>
+</Column>
+<Column id="297" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="298" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="299" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="300" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="301" name="PLAN" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra el PLAN que tiene el usuario contratado</Text>
+<Column id="302" name="COD_PLAN" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo que indentifica al Plan</CP>
+</Column>
+<Column id="303" name="NOM_PLAN" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del Plan</CP>
+</Column>
+<Column id="304" name="IND_ACTIVO" type="boolean" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">false</CP>
+<CP name="COMMENTS">Indicador boolean si esta activo el plan o dado de baja</CP>
+</Column>
+<Column id="305" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="306" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="307" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="308" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="309" name="SUBCRIPCION" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registran las subscripciones</Text>
+<Column id="310" name="NUM_SECSUB" type="serial" length="25" nulls="false">
+<CP name="COMMENTS">Numero secuencial identificador de la subscripcion</CP>
+</Column>
+<Column id="311" name="COD_USUARIO" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del ususario</CP>
+</Column>
+<Column id="312" name="FEC_INIPRUEBA" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha de inicio del perido de prueba</CP>
+</Column>
+<Column id="313" name="FEC_FINPRUEBA" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha de fin del periodo de prueba</CP>
+</Column>
+<Column id="314" name="COD_PLAN" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del plan</CP>
+</Column>
+<Column id="315" name="FEC_INISUB" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha de inicio de la subscripcion</CP>
+</Column>
+<Column id="316" name="FEC_FINSUB" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha fin de la subsripcion</CP>
+</Column>
+<Column id="317" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="318" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="319" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="320" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="321" name="SISTEMA" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra los grupos de usuarios
+Grupo01 Usuario finales normas ONLINE
+Grupo02 Usuario del cms
+</Text>
+<Column id="322" name="COD_SISTEMA" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador del sistema</CP>
+</Column>
+<Column id="323" name="NOM_SISTEMA" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del sistema</CP>
+</Column>
+<Column id="324" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="325" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="326" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="327" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="328" name="MENU" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registran los menus de los sistemas</Text>
+<Column id="329" name="COD_MENU" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador del menu</CP>
+</Column>
+<Column id="330" name="COD_SISTEMA" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo inentificador del sistema</CP>
+</Column>
+<Column id="331" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="332" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="333" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="334" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="335" name="PERFIL_OPCION" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registran la relacion de las opciones habilitadas por Perfil</Text>
+<Column id="336" name="COD_PERFIL" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indetificador del perfil</CP>
+</Column>
+<Column id="337" name="COD_MENU" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador del menu</CP>
+</Column>
+<Column id="338" name="COD_AGRUPACION" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador de la agrupacion</CP>
+</Column>
+<Column id="339" name="COD_OPCION" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indetificadoe de la opcion</CP>
+</Column>
+<Column id="340" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="341" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="342" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="343" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="344" name="SERVICIO" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra los servicios que se ofrecen al usuario final</Text>
+<Column id="345" name="COD_SERVICIO" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del servicio</CP>
+</Column>
+<Column id="346" name="NOM_SERVICIO" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del servicio</CP>
+</Column>
+<Column id="347" name="DES_SERVICIO" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion detallada del servicio</CP>
+</Column>
+<Column id="348" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="349" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="350" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="351" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="352" name="PLAN_SERVICIO" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra los servicios relaciondos al plan suscrito</Text>
+<Column id="353" name="COD_PLAN" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del plan</CP>
+</Column>
+<Column id="354" name="COD_SERVICIO" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Codigo indentificador del servicio</CP>
+</Column>
+<Column id="355" name="FEC_INISERVICIO" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha de inicio del servicio</CP>
+</Column>
+<Column id="356" name="FEC_FINSERVICIO" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha fin del servicio</CP>
+</Column>
+<Column id="357" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="358" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="359" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="360" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="361" name="OFERTA" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla que registra las ofertas</Text>
+<Column id="362" name="COD_OFERTA" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador de la oferta</CP>
+</Column>
+<Column id="363" name="NOM_OFERTA" type="varchar" length="50" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre de la oferta</CP>
+</Column>
+<Column id="364" name="DES_OFERTA" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Descripcion detallada de la oferta</CP>
+</Column>
+<Column id="365" name="FEC_INIVIGOFERTA" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">El período de tiempo durante el cual esta oferta está disponible.</CP>
+</Column>
+<Column id="366" name="FEC_FINVIGOFERTA" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">El período de tiempo durante el cual esta oferta está disponible.</CP>
+</Column>
+<Column id="367" name="POR_DESCUENTO" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Porcentaje de descuento</CP>
+</Column>
+<Column id="368" name="CNT_MAXBUSQ" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Cantidad maxima de busquedas</CP>
+</Column>
+<Column id="369" name="CNT_MESDURACIONBUSQ" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Cantidad de meses de duracion de busquedas</CP>
+</Column>
+<Column id="370" name="FEC_FINDURACIONBUSQ" type="date" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_date</CP>
+<CP name="COMMENTS">Fecha fin de busquedas</CP>
+</Column>
+<Column id="371" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="372" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="373" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="374" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="375" name="PLAN_OFERTA" schema="SEGURIDAD" database="SMARTLEX_BD" background="16777165">
+<Text>Tabla donde se registra la relacion Ofertas del Plan</Text>
+<Column id="376" name="COD_PLAN" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del Plan</CP>
+</Column>
+<Column id="377" name="COD_OFERTA" type="varchar" length="3" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de oferta</CP>
+</Column>
+<Column id="378" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="379" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro</CP>
+</Column>
+<Column id="380" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="381" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="382" name="PRODUCTO" schema="CMS" database="SMARTLEX_BD" background="16763080">
+<Text>Tabla donde se registra el producto conformado por un conjunto de folder</Text>
+<Column id="383" name="COD_PRODUCTO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo indentificador del producto</CP>
+</Column>
+<Column id="384" name="NOM_PRODUCTO" type="varchar" length="200" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Nombre del producto</CP>
+</Column>
+<Column id="385" name="COD_CSS" type="varchar" length="6" nulls="false"/>
+<Column id="386" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="387" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro del usuario</CP>
+</Column>
+<Column id="388" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="389" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion del usuario</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Table id="390" name="FOLDER_PRODUCTO" schema="CMS" database="SMARTLEX_BD" background="16763080">
+<Text>Tabla donde se registra la relacion producto folders</Text>
+<Column id="391" name="NUM_SECFOLDER" type="integer" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+<CP name="COMMENTS">Numero identicador del folder</CP>
+</Column>
+<Column id="392" name="COD_PRODUCTO" type="varchar" length="6" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo identificador del producto</CP>
+</Column>
+<Column id="393" name="COD_USUREGIS" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo del usuario que registra</CP>
+</Column>
+<Column id="394" name="FEC_REGIS" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de registro del usuario</CP>
+</Column>
+<Column id="395" name="COD_USUMODIF" type="varchar" length="30" nulls="false">
+<CP name="DEFAULT_VALUE">' '</CP>
+<CP name="COMMENTS">Codigo de usuario que modifica</CP>
+</Column>
+<Column id="396" name="FEC_MODIF" type="timestamp" length="25" nulls="false">
+<CP name="DEFAULT_VALUE">current_timestamp</CP>
+<CP name="COMMENTS">Fecha de modificacion del usuario</CP>
+</Column>
+<Storage name="transferTable" value="false"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="TempTable" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="External" value="false"/>
+</Table>
+<Relation id="397" name="FK01_ACCESOS_DIRECTO_TO_VISTA" cardinality="-1" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>106</FK>
+<PK>78</PK>
+</Relation>
+<Relation id="398" name="FK01_ASOCIACION_TO_CATALOGO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>184</FK>
+<PK>216</PK>
+</Relation>
+<Relation id="399" name="FK01_CAMPO_TO_VERSION_RECURSO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>126</FK>
+<PK>98</PK>
+</Relation>
+<Relation id="400" name="FK01_COMPONENTE_TO_VISTA" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>106</FK>
+<PK>118</PK>
+</Relation>
+<Relation id="401" name="FK01_DATAASOCIACION_TO_ASOCIACION" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>214</FK>
+<PK>225</PK>
+</Relation>
+<Relation id="402" name="FK01_DATACATALOGO_TO_CATALOGO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>184</FK>
+<PK>193</PK>
+</Relation>
+<Relation id="403" name="FK01_DATAGRUPO_TO_DATACATALOGO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>193</FK>
+<FK>194</FK>
+<PK>238</PK>
+<PK>239</PK>
+</Relation>
+<Relation id="404" name="FK01_DOCUMENTO_TO_ESTRUCTURADOC" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>52</FK>
+<PK>46</PK>
+</Relation>
+<Relation id="405" name="FK01_ESTRUCTURACAMPO_TO_ESTRUCTURADOC" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>1</FK>
+<FK>2</FK>
+<PK>15</PK>
+<PK>16</PK>
+</Relation>
+<Relation id="406" name="FK01_ESTRUCTURADOC_TO_PRESENTACION" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>176</FK>
+<PK>54</PK>
+</Relation>
+<Relation id="407" name="FK01_ESTRUCTURARECURSO_TO_ESTRUCTURADOC" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>52</FK>
+<PK>1</PK>
+</Relation>
+<Relation id="408" name="FK01_GRUPO_OPCION_TO_OPCION" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="initially" class="String" value="DEFERRED"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>268</FK>
+<FK>269</FK>
+<PK>254</PK>
+<PK>255</PK>
+</Relation>
+<Relation id="409" name="FK01_LINK_ARCHIVO_TO_VISTA" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>106</FK>
+<PK>169</PK>
+</Relation>
+<Relation id="410" name="FK01_LINK_TO_CAMPO" cardinality="-1" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>95</FK>
+<PK>148</PK>
+</Relation>
+<Relation id="411" name="FK01_MENU_TO_GRUPO_OPCION" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>329</FK>
+<PK>268</PK>
+</Relation>
+<Relation id="412" name="FK01_PERFIL_OPCION_TO_PERFIL" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>247</FK>
+<PK>336</PK>
+</Relation>
+<Relation id="413" name="FK01_PERFIL_TO_USUARIO_PERFIL" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>247</FK>
+<PK>294</PK>
+</Relation>
+<Relation id="414" name="FK01_PLAN_OFERTA_TO_PLAN" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>302</FK>
+<PK>376</PK>
+</Relation>
+<Relation id="415" name="FK01_PLAN_SERVICIO_TO_SERVICIO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>345</FK>
+<PK>354</PK>
+</Relation>
+<Relation id="416" name="FK01_PLAN_TO_SUBSCRIPCION" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>302</FK>
+<PK>314</PK>
+</Relation>
+<Relation id="417" name="FK01_PRESENTACION_TO_PRODUCTO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>176</FK>
+<PK>385</PK>
+</Relation>
+<Relation id="418" name="FK01_PRODUCTO_TO_FOLDERPRODUCTO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>383</FK>
+<PK>392</PK>
+</Relation>
+<Relation id="419" name="FK01_RECURSO_COMP_TO_COMPONENTE" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>117</FK>
+<PK>162</PK>
+</Relation>
+<Relation id="420" name="FK01_RECURSO_REF_TO_REFERENCIA" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>86</FK>
+<PK>134</PK>
+</Relation>
+<Relation id="421" name="FK01_RECURSO_TO_DOCUMENTO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>43</FK>
+<PK>37</PK>
+</Relation>
+<Relation id="422" name="FK01_REFERENCIA_TO_VERSION_RECURSO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>126</FK>
+<PK>88</PK>
+</Relation>
+<Relation id="423" name="FK01_SISTEMA_TO_MENU" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>322</FK>
+<PK>330</PK>
+</Relation>
+<Relation id="424" name="FK01_USUARIO_TO_SISTEMA" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>322</FK>
+<PK>278</PK>
+</Relation>
+<Relation id="425" name="FK01_USUARIO_TO_SUBSCRIPCION" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>278</FK>
+<PK>311</PK>
+</Relation>
+<Relation id="426" name="FK01_USUARIO_TO_USUARIO_PERFIL" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>278</FK>
+<PK>293</PK>
+</Relation>
+<Relation id="427" name="FK01_VERSION_RECURSO_TO_RECURSO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>34</FK>
+<PK>128</PK>
+</Relation>
+<Relation id="428" name="FK01_VISTA_COMP_TO_COMPONENTE" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>117</FK>
+<PK>155</PK>
+</Relation>
+<Relation id="429" name="FK01_VISTA_REF_TO_REFERENCIA" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>86</FK>
+<PK>141</PK>
+</Relation>
+<Relation id="430" name="FK01_VISTA_TO_DOCUMENTO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>43</FK>
+<PK>111</PK>
+</Relation>
+<Relation id="431" name="FK02_ACCESOS_DIRECTO_TO_FOLDER" cardinality="-1" identifying="false" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>70</FK>
+<PK>79</PK>
+</Relation>
+<Relation id="432" name="FK02_ASOCIACION_TO_CATALOGO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>184</FK>
+<PK>215</PK>
+</Relation>
+<Relation id="433" name="FK02_DATAASOCIACION_TO_DATACATALOGO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>193</FK>
+<FK>194</FK>
+<PK>226</PK>
+<PK>227</PK>
+</Relation>
+<Relation id="434" name="FK02_DATAGRUPO_TO_GRUPO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>205</FK>
+<PK>237</PK>
+</Relation>
+<Relation id="435" name="FK02_FOLDER_TO_FOLDERPRODUCTO" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>70</FK>
+<PK>391</PK>
+</Relation>
+<Relation id="436" name="FK02_LINK_ARCHIVO_TO_ARCHIVO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>60</FK>
+<PK>170</PK>
+</Relation>
+<Relation id="437" name="FK02_LINK_TO_ARCHIVO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>60</FK>
+<PK>149</PK>
+</Relation>
+<Relation id="438" name="FK02_PERFIL_OPCION_TO_MENU" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>254</FK>
+<FK>255</FK>
+<FK>256</FK>
+<PK>337</PK>
+<PK>338</PK>
+<PK>339</PK>
+</Relation>
+<Relation id="439" name="FK02_PLA_SERVICIO_TO_PLAN" cardinality="-2" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>302</FK>
+<PK>353</PK>
+</Relation>
+<Relation id="440" name="FK02_PLAN_OFERTA_TO_OFERTA" cardinality="-2" identifying="true" nulls="false">
+<FK>362</FK>
+<PK>377</PK>
+</Relation>
+<Relation id="441" name="FK02_PRESENTACION_TO_ARCHIVO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>60</FK>
+<PK>178</PK>
+</Relation>
+<Relation id="442" name="FK02_RECURSO_COMP_TO_VERSION_RECURSO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>126</FK>
+<PK>163</PK>
+</Relation>
+<Relation id="443" name="FK02_RECURSO_REF_TO_VERSION_RECURSO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>126</FK>
+<PK>135</PK>
+</Relation>
+<Relation id="444" name="FK02_VISTA_COMP_TO_VISTA" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>106</FK>
+<PK>156</PK>
+</Relation>
+<Relation id="445" name="FK02_VISTA_REF_VISTA" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>106</FK>
+<PK>142</PK>
+</Relation>
+<Relation id="446" name="FK03_DATAASOCIACION_TO_DATACATALOGO" cardinality="1" identifying="true" nulls="false">
+<Option name="onDelete" class="String" value="RESTRICT"/>
+<Option name="onUpdate" class="String" value="RESTRICT"/>
+<FK>193</FK>
+<FK>194</FK>
+<PK>228</PK>
+<PK>229</PK>
+</Relation>
+<Note id="447">
+<Text>CREAR RECURSO AUTOMATICO INDICE APRA TODAS LAS VISTAS
+Atributos multivalor
+ejemplo Materias Keywords
+
+Rol: editor,clasificador,Configurador
+ALL= Admin
+
+LAS VISTAS SE COMPONEN DE DOCUMENTOS Y RECURSOS
+DE DIFERENTES VERSIONES Y DIFERENTES DOCUMENTOS
+VISTAS
+-------
+VISTA-0      VISTA-1
+D1            D1                       D2 (otro documento)
++-R1          +-R4 (NEW)               +-R10
++-R2          +-R2_v2 (otra version)   +-R11
++-R3          +-R3
+              +-R10
+              +-R11_v4
+              
+              
+VERSIONES
+----------
+VERSION-0     VERSION-1               VERSION-2
+D1            D1                      D1
++-R1          +-R1                    +-R1          
++-R2          +-R2' (MODIFICADO)      +-R2'
++-R3(BAJA)    +-R4 (NUEVO)            +-R4' (MODIFICADO)  
+</Text>
+</Note>
+<Note id="448">
+<Text>EL DOCUMENTO VA TENER TODOS LOS RECURSOS DE DIFERENTES VISTAS
+VISTA ORIGINAL Y LAS DEMAS</Text>
+</Note>
+<Note id="449">
+<Text>SE GENERAN 3 RECURSOS AUTOMATICOS:
+IDENTIFICADOR
+REFERENCIA
+POPUP</Text>
+</Note>
+<Note id="450">
+<Text>ENBASE A LOS VALOR DE LOS SCSS REGISTRADOS EN ESTILOSCSS
+SE GENRA UN ARCHIVO CSS PUBLICADO EN EL SERVIDOR DE DOCUMENTOS
+EJEMPLO LEGISLACION.CSS</Text>
+</Note>
+<Constraint table="0" name="PK_CAB_ESTRUCTURADOC" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="1"/>
+<ConstraintColumn id="2"/>
+</Constraint>
+<Constraint table="14" name="PK_DET_ESTRUCTURADOC" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="15"/>
+<ConstraintColumn id="16"/>
+<ConstraintColumn id="17"/>
+</Constraint>
+<Constraint table="33" name="PK_RECURSO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="34"/>
+</Constraint>
+<Constraint table="42" name="PK_DOCUMENTO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="43"/>
+</Constraint>
+<Constraint table="51" name="PK_ESTRUCTURA_DOC" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="52"/>
+</Constraint>
+<Constraint table="59" name="PK_ARCHIVO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="60"/>
+</Constraint>
+<Constraint table="69" name="PK_FOLDER" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="70"/>
+</Constraint>
+<Constraint table="77" name="PK_ACCESO_DIRECTO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="78"/>
+<ConstraintColumn id="79"/>
+</Constraint>
+<Constraint table="85" name="PK_REFERENCIA" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="86"/>
+</Constraint>
+<Constraint table="85" name="CHECK01_COD_TIPOREF" type="Check" condition="(COD_TIPOREF IN ('VIS','REC'))"/>
+<Constraint table="94" name="PK_CAMPO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="95"/>
+</Constraint>
+<Constraint table="105" name="PK_VISTA" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="106"/>
+</Constraint>
+<Constraint table="116" name="PK_COMPOSICION" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="117"/>
+</Constraint>
+<Constraint table="116" name="CHECK01_COD_TIPOCOMP" type="Check" condition="(COD_TIPOCOMP IN ('VIS','REC'))"/>
+<Constraint table="125" name="PK_RECURSO_VERSION" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="126"/>
+</Constraint>
+<Constraint table="133" name="PK_RECURSO_REF" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="134"/>
+</Constraint>
+<Constraint table="140" name="PK_VISTA_REF" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="141"/>
+</Constraint>
+<Constraint table="147" name="PK_LINK_IMAGEN" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="148"/>
+<ConstraintColumn id="149"/>
+</Constraint>
+<Constraint table="154" name="PK_VISTA_COMP" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="155"/>
+</Constraint>
+<Constraint table="161" name="PK_RECURSO_COMP" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="162"/>
+</Constraint>
+<Constraint table="168" name="PK_LINK_ARCHIVO" type="PrimKey">
+<ConstraintColumn id="169"/>
+<ConstraintColumn id="170"/>
+</Constraint>
+<Constraint table="175" name="PK_PRESENTACION" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="176"/>
+</Constraint>
+<Constraint table="183" name="PK_CATALOGO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="184"/>
+</Constraint>
+<Constraint table="192" name="PK_DATACATALOGO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="193"/>
+<ConstraintColumn id="194"/>
+</Constraint>
+<Constraint table="204" name="PK_GRUPO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="205"/>
+</Constraint>
+<Constraint table="213" name="PK_ASOCIACION" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="214"/>
+</Constraint>
+<Constraint table="224" name="PK_DATAASOCIACION" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="225"/>
+<ConstraintColumn id="226"/>
+<ConstraintColumn id="227"/>
+<ConstraintColumn id="228"/>
+<ConstraintColumn id="229"/>
+</Constraint>
+<Constraint table="236" name="PK_DATAGRUPO" type="PrimKey">
+<Option name="tablespace" class="String" value=""/>
+<ConstraintColumn id="237"/>
+<ConstraintColumn id="238"/>
+<ConstraintColumn id="239"/>
+</Constraint>
+<Constraint table="246" name="PK_PERFI" type="PrimKey">
+<ConstraintColumn id="247"/>
+</Constraint>
+<Constraint table="253" name="PK_OPCION" type="PrimKey">
+<ConstraintColumn id="254"/>
+<ConstraintColumn id="255"/>
+<ConstraintColumn id="256"/>
+</Constraint>
+<Constraint table="267" name="PK_GRUPO_OPCION" type="PrimKey">
+<ConstraintColumn id="268"/>
+<ConstraintColumn id="269"/>
+</Constraint>
+<Constraint table="277" name="PK_CUENTA_USUARIO" type="PrimKey">
+<ConstraintColumn id="278"/>
+</Constraint>
+<Constraint table="292" name="PK_USUARIO_PEFIL" type="PrimKey">
+<ConstraintColumn id="293"/>
+<ConstraintColumn id="294"/>
+</Constraint>
+<Constraint table="301" name="PK_PLAN" type="PrimKey">
+<ConstraintColumn id="302"/>
+</Constraint>
+<Constraint table="309" name="PK_SUBCRIPCION" type="PrimKey">
+<ConstraintColumn id="310"/>
+</Constraint>
+<Constraint table="321" name="PK_SISTEMA" type="PrimKey">
+<ConstraintColumn id="322"/>
+</Constraint>
+<Constraint table="328" name="PK_MENU" type="PrimKey">
+<ConstraintColumn id="329"/>
+</Constraint>
+<Constraint table="335" name="PK_PERFIL_OPCION" type="PrimKey">
+<ConstraintColumn id="336"/>
+<ConstraintColumn id="337"/>
+<ConstraintColumn id="338"/>
+<ConstraintColumn id="339"/>
+</Constraint>
+<Constraint table="344" name="PK_SERVICIO" type="PrimKey">
+<ConstraintColumn id="345"/>
+</Constraint>
+<Constraint table="352" name="PK_PLAN_SERVICIO" type="PrimKey">
+<ConstraintColumn id="353"/>
+<ConstraintColumn id="354"/>
+</Constraint>
+<Constraint table="361" name="PK_OFERTA" type="PrimKey">
+<ConstraintColumn id="362"/>
+</Constraint>
+<Constraint table="375" name="PK_PLAN_OFERTa" type="PrimKey">
+<ConstraintColumn id="376"/>
+<ConstraintColumn id="377"/>
+</Constraint>
+<Constraint table="382" name="PK_PRODUCTO" type="PrimKey">
+<ConstraintColumn id="383"/>
+</Constraint>
+<Constraint table="390" name="PK_FOLDER_PRODUCTO" type="PrimKey">
+<ConstraintColumn id="391"/>
+<ConstraintColumn id="392"/>
+</Constraint>
+<Sheet name="Untitled 1" id="451" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true" disp_null="true">
+<Place id="445" visible="true" options="458.0,529.0,241.0,222.0,1547.0,1839.0,263.0,172.0,4,680.0,751.0,680.0,1220.0,1640.0,1220.0,1640.0,1839.0">500,0,0,0</Place>
+<Place id="183" visible="true">2480,450,211,211</Place>
+<Place id="435" visible="true" options="1439.0,690.0,211.0,190.0,1809.0,530.0,171.0,160.0,4,1650.0,820.0,1700.0,820.0,1700.0,610.0,1809.0,610.0">500,0,0,0</Place>
+<Place id="408" visible="true" options="2980.0,1230.0,211.0,221.0,3530.0,1230.0,211.0,281.0,4,3191.0,1320.0,3355.5,1320.0,3355.5,1370.0,3530.0,1370.0">500,0,0,0</Place>
+<Place id="441" visible="true">500,0,0,0</Place>
+<Place id="292" visible="true">2870,1660,211,211</Place>
+<Place id="427" visible="true" options="845.0,936.0,201.0,201.0,968.0,1249.0,401.0,172.0,4,1040.0,1137.0,1040.0,1190.0,1040.0,1190.0,1040.0,1249.0">500,0,0,0</Place>
+<Place id="116" visible="true">889,370,281,191</Place>
+<Place id="419" visible="true" options="889.0,370.0,281.0,191.0,1548.0,330.0,261.0,170.0,4,1170.0,390.0,1360.0,390.0,1360.0,390.0,1548.0,390.0">500,0,0,0</Place>
+<Place id="147" visible="true">1918,910,231,181</Place>
+<Place id="443" visible="true" options="968.0,1249.0,401.0,172.0,910.0,1879.0,231.0,172.0,2,1040.0,1421.0,1040.0,1879.0">500,0,0,0</Place>
+<Place id="401" visible="true">500,0,0,0</Place>
+<Place id="418" visible="true">500,0,0,0</Place>
+<Place id="236" visible="true">3001,160,290,262</Place>
+<Place id="436" visible="true" options="87.32478143256935,299.1082604775231,220.0,281.0,510.0,249.0,171.0,171.0,4,307.32478143256935,430.0,403.5,430.0,403.5,340.0,510.0,340.0">500,0,0,0</Place>
+<Place id="382" visible="true">2078,709,211,171</Place>
+<Place id="133" visible="true">910,1879,231,172</Place>
+<Place id="253" visible="true">3530,1230,211,281</Place>
+<Place id="398" visible="true">500,0,0,0</Place>
+<Place id="352" visible="true">3680,2160,201,201</Place>
+<Place id="59" visible="true">87,299,220,281</Place>
+<Place id="432" visible="true">500,0,0,0</Place>
+<Place id="175" visible="true">70,680,141,171</Place>
+<Place id="390" visible="true">1809,530,171,160</Place>
+<Place id="423" visible="true">500,0,0,0</Place>
+<Place id="0" visible="true">19,1390,240,291</Place>
+<Place id="450" visible="true">89,150,171,110</Place>
+<Place id="213" visible="true">3230,440,301,290</Place>
+<Place id="402" visible="true">500,0,0,0</Place>
+<Place id="417" visible="true" options="70.0,680.0,141.0,171.0,2078.0,709.0,211.0,171.0,8,211.0,830.0,831.0,830.0,831.0,910.0,1230.0,910.0,1230.0,890.0,1701.0,890.0,1701.0,810.0,2078.0,810.0">500,0,0,0</Place>
+<Place id="411" visible="true" options="2560.0,1180.0,181.0,151.0,2980.0,1230.0,211.0,221.0,4,2741.0,1260.0,2741.0,1265.0,2980.0,1265.0,2980.0,1270.0">500,0,0,0</Place>
+<Place id="204" visible="true">2520,130,230,221</Place>
+<Place id="422" visible="true" options="968.0,1249.0,401.0,172.0,1257.0,1578.0,231.0,221.0,2,1290.0,1421.0,1290.0,1578.0">500,0,0,0</Place>
+<Place id="413" visible="true">500,0,0,0</Place>
+<Place id="192" visible="true">2459,819,290,271</Place>
+<Place id="409" visible="true">500,0,0,0</Place>
+<Place id="224" visible="true">3130,820,311,310</Place>
+<Place id="446" visible="true">500,0,0,0</Place>
+<Place id="434" visible="true">381,-5,0,0</Place>
+<Place id="154" visible="true">1369,510,250,161</Place>
+<Place id="94" visible="true">1258,909,241,231</Place>
+<Place id="403" visible="true">500,0,0,0</Place>
+<Place id="69" visible="true">1439,690,211,190</Place>
+<Place id="161" visible="true">1548,330,261,170</Place>
+<Place id="168" visible="true">510,249,171,171</Place>
+<Place id="410" visible="true">500,0,0,0</Place>
+<Place id="277" visible="true">2390,1640,251,281</Place>
+<Place id="77" visible="true">980,699,231,192</Place>
+<Place id="420" visible="true" options="1257.0,1578.0,231.0,221.0,910.0,1879.0,231.0,172.0,3,1257.0,1660.0,1110.0,1660.0,1110.0,1879.0">500,0,0,0</Place>
+<Place id="321" visible="true">2410,1380,221,180</Place>
+<Place id="405" visible="true">500,0,0,0</Place>
+<Place id="335" visible="true">3100,1470,231,191</Place>
+<Place id="42" visible="true">420,998,211,181</Place>
+<Place id="140" visible="true">1547,1839,263,172</Place>
+<Place id="407" visible="true">500,0,0,0</Place>
+<Place id="439" visible="true">500,0,0,0</Place>
+<Place id="406" visible="true">500,0,0,0</Place>
+<Place id="361" visible="true">2810,2340,191,291</Place>
+<Place id="246" visible="true">3300,1710,201,191</Place>
+<Place id="444" visible="true">500,0,0,0</Place>
+<Place id="399" visible="true" options="968.0,1249.0,401.0,172.0,1258.0,909.0,241.0,231.0,4,1330.0,1249.0,1330.0,1190.0,1380.0,1190.0,1380.0,1140.0">500,0,0,0</Place>
+<Place id="438" visible="true" options="3530.0,1230.0,211.0,281.0,3100.0,1470.0,231.0,191.0,4,3530.0,1390.0,3420.0,1390.0,3420.0,1560.0,3331.0,1560.0">500,0,0,0</Place>
+<Place id="426" visible="true" options="2390.0,1640.0,251.0,281.0,2870.0,1660.0,211.0,211.0,2,2641.0,1750.0,2870.0,1750.0">500,0,0,0</Place>
+<Place id="448" visible="true">509,908,231,62</Place>
+<Place id="437" visible="true" options="87.32478143256935,299.1082604775231,220.0,281.0,1918.0,910.0,231.0,181.0,5,307.32478143256935,370.0,410.0,370.0,410.0,210.0,2040.0,210.0,2040.0,910.0">500,0,0,0</Place>
+<Place id="428" visible="true">500,0,0,0</Place>
+<Place id="415" visible="true">500,0,0,0</Place>
+<Place id="267" visible="true">2980,1230,211,221</Place>
+<Place id="431" visible="true">500,0,0,0</Place>
+<Place id="416" visible="true">500,0,0,0</Place>
+<Place id="412" visible="true">500,0,0,0</Place>
+<Place id="425" visible="true">500,0,0,0</Place>
+<Place id="424" visible="true">500,0,0,0</Place>
+<Place id="309" visible="true">2769,1969,261,252</Place>
+<Place id="33" visible="true">845,936,201,201</Place>
+<Place id="105" visible="true">458,529,241,222</Place>
+<Place id="404" visible="true">500,0,0,0</Place>
+<Place id="375" visible="true">3250,2380,201,201</Place>
+<Place id="433" visible="true">500,0,0,0</Place>
+<Place id="447" visible="true">1932,69,370,442</Place>
+<Place id="421" visible="true">500,0,0,0</Place>
+<Place id="51" visible="true">19,937,242,211</Place>
+<Place id="397" visible="true">500,0,0,0</Place>
+<Place id="449" visible="true">850,270,140,82</Place>
+<Place id="125" visible="true">968,1249,401,172</Place>
+<Place id="430" visible="true" options="420.0,998.0,211.0,181.0,458.0,529.0,241.0,222.0,4,560.0,998.0,560.0,870.0,560.0,870.0,560.0,751.0">500,0,0,0</Place>
+<Place id="301" visible="true">3230,1990,271,202</Place>
+<Place id="14" visible="true">627,1380,254,371</Place>
+<Place id="85" visible="true">1257,1578,231,221</Place>
+<Place id="328" visible="true">2560,1180,181,151</Place>
+<Place id="429" visible="true">500,0,0,0</Place>
+<Place id="440" visible="true">500,0,0,0</Place>
+<Place id="344" visible="true">3610,1820,231,191</Place>
+<Place id="442" visible="true" options="968.0,1249.0,401.0,172.0,1548.0,330.0,261.0,170.0,3,1369.0,1370.0,1730.0,1370.0,1730.0,500.0">500,0,0,0</Place>
+<Place id="414" visible="true">500,0,0,0</Place>
+<Place id="400" visible="true">500,0,0,0</Place>
+<Region background="14614494" foreground="0" text="ESQUEMA CMS">2,30,2338,2121</Region>
+<Region background="13487615" foreground="0" text="ESQUEMA CATALOGO">2410,40,1553,1122</Region>
+<Region background="16771561" foreground="0" text="ESQUEMA SEGURIDAD">2360,1160,1541,1491</Region>
+</Sheet>
+<Settings sheet="451" zoom="1.4142135623730951"/>
+</Diagram>
