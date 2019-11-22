@@ -1,0 +1,873 @@
+#https://app.pluralsight.com/library/courses/apache-solr-search-playbook
+#https://app.pluralsight.com/library/courses/enterprise-search-using-apache-solr
+#https://app.pluralsight.com/library/courses/implementing-search-dotnet-applications
+##https://app.pluralsight.com/library/courses/ng-big-picture
+##https://app.pluralsight.com/library/courses/angular-2-getting-started-update
+##https://app.pluralsight.com/library/courses/angular-forms
+##https://app.pluralsight.com/library/courses/angular-cli
+##https://app.pluralsight.com/library/courses/best-practices-angular
+##https://app.pluralsight.com/library/courses/angular-architecture-best-practices
+##https://app.pluralsight.com/library/courses/angular-2-reactive-forms
+##https://app.pluralsight.com/library/courses/angular-ngrx-getting-started
+##https://app.pluralsight.com/library/courses/angular-http-communication
+##https://app.pluralsight.com/library/courses/angular-services
+##https://app.pluralsight.com/library/courses/angular-fundamentals
+##https://app.pluralsight.com/library/courses/angular-routing
+##https://app.pluralsight.com/library/courses/openid-and-oauth2-securing-angular-apps
+##https://app.pluralsight.com/library/courses/unit-testing-angular
+
+#aws storage
+https://app.pluralsight.com/library/courses/aws-elastic-block-store-implementing
+https://app.pluralsight.com/library/courses/aws-elastic-file-system-implementing
+https://app.pluralsight.com/library/courses/aws-s3-implementing
+https://app.pluralsight.com/library/courses/amazon-ec2-storage-managing
+https://app.pluralsight.com/library/courses/amazon-aws-glacier-archiving
+https://app.pluralsight.com/library/courses/aws-storage-gateway-provisioning-managing
+#aws operation
+https://app.pluralsight.com/library/courses/automating-aws-operations-aws-cli
+https://app.pluralsight.com/library/courses/deploying-application-aws
+https://app.pluralsight.com/library/courses/aws-operations-devops-getting-started
+https://app.pluralsight.com/library/courses/aws-operations-designing-infrastructure-deployment
+https://app.pluralsight.com/library/courses/aws-operations-deploying-basic-infrastructure
+https://app.pluralsight.com/library/courses/implementing-testing-blue-green-deployments-aws
+https://app.pluralsight.com/library/courses/aws-operations-managing
+#aws scalability
+https://app.pluralsight.com/library/courses/aws-ec2-auto-scaling-implementing
+https://app.pluralsight.com/library/courses/aws-load-balancing-implementing
+https://app.pluralsight.com/library/courses/aws-auto-scaling-resources
+#AWS database
+https://app.pluralsight.com/library/courses/aws-amazon-rds
+https://app.pluralsight.com/library/courses/administering-amazon-aurora-amazon-rds
+https://app.pluralsight.com/library/courses/aws-dynamodb-fundamentals
+https://app.pluralsight.com/library/courses/aws-redshift-data-warehousing
+https://app.pluralsight.com/library/courses/aws-amazon-neptune-graph-database
+https://app.pluralsight.com/library/courses/aws-database-migration-service-migrating
+https://app.pluralsight.com/library/courses/aws-database-amazon-elasticache
+#AWS Networking
+https://app.pluralsight.com/library/courses/aws-network-design-getting-started
+https://app.pluralsight.com/library/courses/implementing-aws-networking-security-groups
+https://app.pluralsight.com/library/courses/aws-networking-deep-dive-elb
+https://app.pluralsight.com/library/courses/aws-networking-deep-dive-route-53-dns
+https://app.pluralsight.com/library/courses/aws-networking-deep-dive-vpc
+#AWS Compute
+https://app.pluralsight.com/library/courses/aws-managing-ec2-instances
+https://app.pluralsight.com/library/courses/aws-managing-docker-containers
+https://app.pluralsight.com/library/courses/using-docker-aws
+https://app.pluralsight.com/library/courses/aws-managing-applications
+#Architecting in AWS
+https://app.pluralsight.com/library/courses/aws-architecting-reliability
+https://app.pluralsight.com/library/courses/architecting-security-aws
+https://app.pluralsight.com/library/courses/aws-architecting-cost
+https://app.pluralsight.com/library/courses/architecting-operational-excellence-aws
+https://app.pluralsight.com/library/courses/architecting-performance-efficiency-aws
+#AWS Big Data
+https://app.pluralsight.com/library/courses/big-data-aws-big-picture
+https://app.pluralsight.com/library/courses/serverless-analytics-aws
+https://app.pluralsight.com/library/courses/aws-s3-implementing
+https://app.pluralsight.com/library/courses/aws-dynamodb-deep-dive-2019
+https://app.pluralsight.com/library/courses/amazon-redshift-data-warehouse
+https://app.pluralsight.com/library/courses/aws-kinesis-processing-app
+https://app.pluralsight.com/library/courses/aws-big-data-production
+#AWS IoT Path
+https://app.pluralsight.com/library/courses/aws-iot-big-picture
+https://app.pluralsight.com/library/courses/aws-iot-amazon-1click
+https://app.pluralsight.com/library/courses/integrating-aws-iot-core
+https://app.pluralsight.com/library/courses/aws-iot-device-management
+https://app.pluralsight.com/library/courses/aws-iot-device-defender
+https://app.pluralsight.com/library/courses/aws-iot-amazon-greengrass
+https://app.pluralsight.com/library/courses/aws-iot-analytics
+#AWS Cloud Security
+https://app.pluralsight.com/library/courses/aws-security-introduction
+https://app.pluralsight.com/library/courses/identity-access-management-aws-users
+https://app.pluralsight.com/library/courses/securing-data-aws
+https://app.pluralsight.com/library/courses/securing-aws-infrastructure
+https://app.pluralsight.com/library/courses/aws-cloud-security-monitoring
+https://app.pluralsight.com/library/courses/aws-networking-deep-dive-vpc
+#AWS Machine Learning /AI
+https://app.pluralsight.com/library/courses/getting-started-amazon-lex
+https://app.pluralsight.com/library/courses/aws-comprehend-analyzing-text
+https://app.pluralsight.com/library/courses/aws-polly-voice-enabled-serverless-website
+https://app.pluralsight.com/library/courses/aws-translate-text
+https://app.pluralsight.com/library/courses/aws-transcribe-speech-text
+https://app.pluralsight.com/library/courses/aws-rekognition-developing-applications
+https://app.pluralsight.com/library/courses/aws-sagemaker-machine-learning-models
+https://app.pluralsight.com/library/courses/aws-ami-deep-learning-instances-frameworks
+#AWS Certified Developer Associate
+https://app.pluralsight.com/library/courses/aws-developer-big-picture
+https://app.pluralsight.com/library/courses/aws-developer-getting-started
+https://app.pluralsight.com/library/courses/aws-developer-designing-developing
+https://app.pluralsight.com/library/courses/aws-developer-deployment-security
+https://app.pluralsight.com/library/courses/aws-developer-serverless-architecture-monitoring
+https://app.pluralsight.com/library/courses/aws-developer-demystifying-associate-exam
+#AWS Certified DevOps Engineer
+https://app.pluralsight.com/library/courses/continuous-delivery-automation-aws-certified-devops-engineer
+https://app.pluralsight.com/library/courses/monitoring-metrics-logging-aws-certified-devops-engineer
+https://app.pluralsight.com/library/courses/security-governance-validation-aws-certified-devops-engineer
+https://app.pluralsight.com/library/courses/high-availability-elasticity-aws-certified-devops-engineer
+#AWS Certified Solutions Architect -Associate
+https://app.pluralsight.com/library/courses/aws-architecting-reliability
+https://app.pluralsight.com/library/courses/architecting-security-aws
+https://app.pluralsight.com/library/courses/aws-architecting-cost
+https://app.pluralsight.com/library/courses/architecting-operational-excellence-aws
+https://app.pluralsight.com/library/courses/architecting-performance-efficiency-aws
+https://app.pluralsight.com/library/courses/demystifying-aws-certified-solutions-architect-associate-exam
+#Identify and Access Management on AWS
+https://app.pluralsight.com/library/courses/identity-access-management-aws-users
+https://app.pluralsight.com/library/courses/identity-access-management-aws-roles-groups
+https://app.pluralsight.com/library/courses/identity-access-management-aws-policies-permissions
+https://app.pluralsight.com/library/courses/identity-access-management-aws-designing-implementing
+#AWS Certified SysOps Adminitrator Associate
+https://app.pluralsight.com/library/courses/aws-operations-managing
+https://app.pluralsight.com/library/courses/aws-cloud-security-monitoring
+https://app.pluralsight.com/library/courses/aws-ec2-auto-scaling-implementing
+https://app.pluralsight.com/library/courses/aws-load-balancing-implementing
+https://app.pluralsight.com/library/courses/aws-auto-scaling-resources
+
+######AZURE
+#Microsoft Azure for Developers
+https://app.pluralsight.com/library/courses/microsoft-azure-the-big-picture
+https://app.pluralsight.com/library/courses/introduction-azure-app-services
+https://app.pluralsight.com/library/courses/azure-functions-fundamentals
+https://app.pluralsight.com/library/courses/azure-cosmos-db
+https://app.pluralsight.com/library/courses/microsoft-azure-developers-what-to-use
+https://app.pluralsight.com/library/courses/azure-paas-building-global-app
+https://app.pluralsight.com/library/courses/azure-adding-search-abilities-apps
+https://app.pluralsight.com/library/courses/azure-function-triggers-quick-start
+https://app.pluralsight.com/library/courses/microsoft-azure-blob-storage-implementing
+https://app.pluralsight.com/library/courses/azure-design-patterns-availability-resilience
+https://app.pluralsight.com/library/courses/azure-design-patterns-design-implementation
+https://app.pluralsight.com/library/courses/azure-design-patterns-data-management-performance
+#Integration on Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-implementing-web-mobile-services-update
+https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-messaging-eventing
+https://app.pluralsight.com/library/courses/microsoft-azure-microsoft-graph-app-service-integrating
+#Testing on Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-load-testing-performing
+https://app.pluralsight.com/library/courses/microsoft-azure-unit-integration-testing-performing
+https://app.pluralsight.com/library/courses/microsoft-azure-end-to-end-automated-testing-performing
+https://app.pluralsight.com/library/courses/microsoft-azure-data-integrity-testing-performing
+#Microsoft Azure Deployment
+https://app.pluralsight.com/library/courses/microsoft-azure-deployment-requirements-specifying
+https://app.pluralsight.com/library/courses/microsoft-azure-deployment-environment-configuring
+https://app.pluralsight.com/library/courses/microsoft-azure-web-applications-services-deploying
+https://app.pluralsight.com/library/courses/microsoft-azure-containers-deploying-managing
+#Monitoring Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-security-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-hybrid-cloud-networks-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-subscription-resource-utilization-analyzing
+#Microsoft Azure Compute for Developers
+https://app.pluralsight.com/library/courses/microsoft-azure-virtual-machines-provisioning
+https://app.pluralsight.com/library/courses/microsoft-azure-implementing-web-mobile-services-update
+https://app.pluralsight.com/library/courses/microsoft-azure-web-jobs
+https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-logic-app-creating
+https://app.pluralsight.com/library/courses/azure-service-fabric-programming-models
+https://app.pluralsight.com/library/courses/microsoft-azure-serverless-functions-create
+https://app.pluralsight.com/library/courses/microsoft-azure-batch-getting-started
+#Application Development on Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-code-refactoring
+https://app.pluralsight.com/library/courses/microsoft-azure-vsts-code-reviews-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-ensuring-configurability
+https://app.pluralsight.com/library/courses/microsoft-azure-textual-content-search-enabling
+https://app.pluralsight.com/library/courses/microsoft-azure-autoscaling-developing
+https://app.pluralsight.com/library/courses/microsoft-azure-developer-creating-integrating-ai-services-update
+https://app.pluralsight.com/library/courses/microsoft-bot-framework-building-bots-getting-started-2019
+https://app.pluralsight.com/library/courses/microsoft-azure-iot-solutions-creating
+https://app.pluralsight.com/library/courses/microsoft-azure-machine-learning-studio-solutions-deploy-create
+#Microsoft Azure Storage for Developers
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-connecting
+https://app.pluralsight.com/library/courses/microsoft-azure-table-storage-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-blob-storage-implementing
+https://app.pluralsight.com/library/courses/azure-cosmos-db
+https://app.pluralsight.com/library/courses/microsoft-azure-cache-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-cdns-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-file-storage-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-data-lake-storage-gen2-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-sql-database-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-cors-access-configuring
+#Managing Microsoft Azure Networking
+https://app.pluralsight.com/library/courses/microsoft-azure-implement-manage-virtual-networks
+https://app.pluralsight.com/library/courses/microsoft-azure-connecting-virtual-networks
+https://app.pluralsight.com/library/courses/microsoft-azure-managing-public-networking
+https://app.pluralsight.com/library/courses/microsoft-azure-on-premises-networks-virtual-networks-connecting
+https://app.pluralsight.com/library/courses/microsoft-azure-network-load-balancing-managing
+#Planning Microsoft Azure Infrastructure
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-compute-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-networking-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-infrastructure-design
+#Designing Microsoft Azure Applications
+https://app.pluralsight.com/library/courses/microsoft-azure-functional-non-functional-requirements-aligning
+https://app.pluralsight.com/library/courses/microsoft-azure-existing-products-services-technologies-identify
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-solution-choosing
+https://app.pluralsight.com/library/courses/microsoft-azure-appropriate-compute-solution-choosing
+https://app.pluralsight.com/library/courses/microsoft-azure-appropriate-integration-solution-identifying
+https://app.pluralsight.com/library/courses/microsoft-azure-solution-detailed-design-creating
+https://app.pluralsight.com/library/courses/microsoft-azure-test-strategy-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-developers-what-to-use
+#Managing Microsoft Azure Compute
+https://app.pluralsight.com/library/courses/microsoft-azure-virtual-machine-deploying
+https://app.pluralsight.com/library/courses/microsoft-azure-configuring-virtual-machines
+https://app.pluralsight.com/library/courses/microsoft-azure-virtual-machines-backing-up
+https://app.pluralsight.com/library/courses/microsoft-azure-deploying-multiple-virtual-machines
+https://app.pluralsight.com/library/courses/microsoft-azure-migrating-physical-virtual-servers
+#Managing Microsoft Azure Storage
+https://app.pluralsight.com/library/courses/microsoft-azure-blob-storage-configuring-using
+https://app.pluralsight.com/library/courses/microsoft-azure-configure-files
+https://app.pluralsight.com/library/courses/microsoft-azure-backup-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-creating-configuring-storage-accounts
+https://app.pluralsight.com/library/courses/microsoft-azure-import-export-data
+#.NET Developer on Microsoft Azure
+https://app.pluralsight.com/library/courses/developing-dotnet-microsoft-azure-getting-started
+https://app.pluralsight.com/library/courses/microsoft-azure-dotnet-cloud-architecture
+https://app.pluralsight.com/library/courses/microsoft-azure-dotnet-secure-services-applications
+#Node.js Developer on Microsoft Azure
+https://app.pluralsight.com/library/courses/developing-nodejs-microsoft-azure-getting-started
+https://app.pluralsight.com/library/courses/microsoft-azure-nodejs-cloud-architecture
+https://app.pluralsight.com/library/courses/microsoft-azure-nodejs-secure-services-applications
+#Planning Microsoft Azure Solutions
+https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-architecture-information-gathering
+https://app.pluralsight.com/library/courses/microsoft-azure-roles-responsibilities-identifying
+https://app.pluralsight.com/library/courses/microsoft-azure-non-functional-requirements-gathering
+https://app.pluralsight.com/library/courses/microsoft-azure-feasibility-determining-requirements-refining
+https://app.pluralsight.com/library/courses/microsoft-azure-detailed-solution-design-documenting
+https://app.pluralsight.com/library/courses/microsoft-azure-one-time-costs-estimating-recurring
+https://app.pluralsight.com/library/courses/microsoft-azure-proposed-solution-relevant-parties-validating
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-solution-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-consumption-strategy-optimizing
+https://app.pluralsight.com/library/courses/microsoft-azure-information-architecture-requirements-identify
+#Building Data Pipelines in Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-databricks-environment-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-building-streaming-data-pipelines
+https://app.pluralsight.com/library/courses/microsoft-azure-batch-data-building
+https://app.pluralsight.com/library/courses/microsoft-azure-data-integrating
+#Securing Data and Applications in Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-configuring-encryption-data-rest
+https://app.pluralsight.com/library/courses/microsoft-azure-applications-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-key-vault-configuring-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-configuring-data-security-policies
+https://app.pluralsight.com/library/courses/microsoft-azure-data-infrastructure-security-configuring
+https://app.pluralsight.com/library/courses/microsoft-azure-securing-application-lifecycle
+#Azure Data Solution (DP-201)
+https://app.pluralsight.com/library/courses/microsoft-azure-data-storage-service-selecting
+https://app.pluralsight.com/library/courses/microsoft-azure-data-access-endpoints-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-databases-access-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-access-storage-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-data-security-policy-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-implementing-data-continuity-availability
+#Microsoft Azure Administrator (AZ-103)
+https://app.pluralsight.com/library/courses/microsoft-azure-subscriptions-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-resource-groups-using
+https://app.pluralsight.com/library/courses/microsoft-azure-subscription-resource-utilization-analyzing
+https://app.pluralsight.com/library/courses/microsoft-azure-role-based-access-control-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-creating-configuring-storage-accounts
+https://app.pluralsight.com/library/courses/microsoft-azure-import-export-data
+https://app.pluralsight.com/library/courses/microsoft-azure-backup-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-configure-files
+https://app.pluralsight.com/library/courses/microsoft-azure-virtual-machine-deploying
+https://app.pluralsight.com/library/courses/microsoft-azure-configuring-virtual-machines
+https://app.pluralsight.com/library/courses/microsoft-azure-virtual-machines-backing-up
+https://app.pluralsight.com/library/courses/microsoft-azure-migrating-physical-virtual-servers
+https://app.pluralsight.com/library/courses/microsoft-azure-implement-manage-virtual-networks
+https://app.pluralsight.com/library/courses/microsoft-azure-connecting-virtual-networks
+https://app.pluralsight.com/library/courses/microsoft-azure-on-premises-networks-virtual-networks-connecting
+https://app.pluralsight.com/library/courses/microsoft-azure-network-load-balancing-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-deploying-multiple-virtual-machines
+https://app.pluralsight.com/library/courses/microsoft-azure-managing-public-networking
+https://app.pluralsight.com/library/courses/microsoft-azure-multi-factor-authentication-implementing-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-active-directory-managing-identities
+https://app.pluralsight.com/library/courses/microsoft-azure-hybrid-identity-overview
+https://app.pluralsight.com/library/courses/microsoft-azure-privileged-identity-management-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-resources-managed-identities-implementing
+#Managing Microsoft Azure Identity and Security
+https://app.pluralsight.com/library/courses/microsoft-azure-resource-groups-using
+https://app.pluralsight.com/library/courses/microsoft-azure-subscriptions-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-multi-factor-authentication-implementing-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-active-directory-managing-identities
+https://app.pluralsight.com/library/courses/microsoft-azure-information-protection-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-privileged-identity-management-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-hybrid-identity-overview
+https://app.pluralsight.com/library/courses/microsoft-azure-resources-managed-identities-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-role-based-access-control-managing
+#Application Security on Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-authentication-scenarios-developers
+https://app.pluralsight.com/library/courses/microsoft-azure-managing-active-directory
+https://app.pluralsight.com/library/courses/microsoft-azure-data-securing
+https://app.pluralsight.com/library/courses/hack-yourself-first
+https://app.pluralsight.com/library/courses/web-security-owasp-top10-big-picture
+https://app.pluralsight.com/library/courses/secure-coding-preventing-insufficient-logging-monitoring
+https://app.pluralsight.com/library/courses/secure-coding-identifying-mitigating-xxe-vulnerabilities
+https://app.pluralsight.com/library/courses/secure-coding-insecure-deserialization-preventing
+#Securing Microsoft Azure Data Solutions
+https://app.pluralsight.com/library/courses/microsoft-azure-data-access-endpoints-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-databases-access-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-access-storage-securing
+#Enabling Platform Protection in Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-configuring-virtual-machines
+https://app.pluralsight.com/library/courses/microsoft-azure-implement-manage-virtual-networks
+https://app.pluralsight.com/library/courses/microsoft-azure-networks-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-security-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-host-security-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-deployment-security-maintaining
+https://app.pluralsight.com/library/courses/microsoft-azure-subscription-security-implementing
+#Configuring Identity and Access in Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-ad-privileged-identity-management-configuring
+https://app.pluralsight.com/library/courses/microsoft-azure-multi-factor-authentication-implementing-managing
+https://app.pluralsight.com/library/courses/configuring-aad-microsoft-azure-workloads
+https://app.pluralsight.com/library/courses/securing-microsoft-azure-subscriptions
+#Microsoft Azure Stack Planning and Operations
+https://app.pluralsight.com/library/courses/microsoft-azure-stack-development-getting-started
+https://app.pluralsight.com/library/courses/microsoft-azure-stack-development-environments-creating
+https://app.pluralsight.com/library/courses/microsoft-azure-stack-solutions-architectural-patterns
+#Infrastructure and Configuration on Microsoft Azure for DevOps Engineers
+https://app.pluralsight.com/library/courses/microsoft-azure-arm-templates-infrastructure-devops
+https://app.pluralsight.com/library/courses/microsoft-azure-kubernetes-infrastructure-manage
+https://app.pluralsight.com/library/courses/microsoft-azure-infrastructure-control-compliance-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-provision-resources
+https://app.pluralsight.com/library/courses/microsoft-azure-imperative-vm-implement
+#Monitoring and Troubleshooting Code on Microsoft Azure
+https://app.pluralsight.com/library/courses/microsoft-azure-performance-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-application-insights-web-application-instrument
+https://app.pluralsight.com/library/courses/microsoft-azure-application-logging-diagnostic-logs-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-portal-troubleshooting-using
+https://app.pluralsight.com/library/courses/microsoft-azure-troubleshooting-advanced
+#Managing Microsoft Azure App Services
+https://app.pluralsight.com/library/courses/microsoft-azure-app-services-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-app-service-plan-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-app-service-protection-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-marketplace-tools-resources-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-serverless-computing-configuring
+#Planning Microsoft Azure Data Solutions
+https://app.pluralsight.com/library/courses/microsoft-azure-data-management-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-data-protection-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-data-flows-document-design
+https://app.pluralsight.com/library/courses/microsoft-azure-data-warehousing-plan
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-data-platform-designing
+#Planning Microsoft Azure Identity and Security
+https://app.pluralsight.com/library/courses/microsoft-azure-identity-management-design
+https://app.pluralsight.com/library/courses/microsoft-azure-authentication-design
+https://app.pluralsight.com/library/courses/microsoft-azure-authorization-design
+https://app.pluralsight.com/library/courses/microsoft-azure-auditing-design
+https://app.pluralsight.com/library/courses/microsoft-azure-risk-prevention-design
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-identity-security-design
+#Planning Microsoft Azure Deployment & Integration
+https://app.pluralsight.com/library/courses/microsoft-azure-deployments-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-migrations-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-messaging-architecture-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-api-management-strategy-designing
+#Planning Microsoft Azure Business Continuity
+https://app.pluralsight.com/library/courses/microsoft-azure-site-recovery-strategy-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-disaster-recovery-strategy-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-high-availability-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-data-archiving-strategy-designing
+#Microsoft Azure Architect Technologies (AZ-300)
+https://app.pluralsight.com/library/courses/microsoft-azure-multi-factor-authentication-implementing-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-active-directory-managing-identities
+https://app.pluralsight.com/library/courses/microsoft-azure-hybrid-identity-overview
+https://app.pluralsight.com/library/courses/microsoft-azure-resources-workloads-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-creating-configuring-storage-accounts
+https://app.pluralsight.com/library/courses/microsoft-azure-implement-manage-virtual-networks
+https://app.pluralsight.com/library/courses/microsoft-azure-on-premises-networks-virtual-networks-connecting
+https://app.pluralsight.com/library/courses/microsoft-azure-network-load-balancing-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-serverless-computing-configuring
+https://app.pluralsight.com/library/courses/microsoft-azure-deploying-multiple-virtual-machines
+https://app.pluralsight.com/library/courses/microsoft-azure-migrating-physical-virtual-servers
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-solution-choosing
+https://app.pluralsight.com/library/courses/microsoft-azure-appropriate-integration-solution-identifying
+https://app.pluralsight.com/library/courses/microsoft-azure-implementing-web-mobile-services-update
+https://app.pluralsight.com/library/courses/azure-service-fabric-programming-models
+https://app.pluralsight.com/library/courses/microsoft-azure-containers-deploying-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-messaging-eventing
+https://app.pluralsight.com/library/courses/microsoft-azure-authentication-scenarios-developers
+https://app.pluralsight.com/library/courses/microsoft-azure-autoscaling-developing
+https://app.pluralsight.com/library/courses/microsoft-azure-developer-creating-integrating-ai-services-update
+https://app.pluralsight.com/library/courses/microsoft-bot-framework-building-bots-getting-started-2019
+https://app.pluralsight.com/library/courses/microsoft-azure-iot-solutions-creating
+https://app.pluralsight.com/library/courses/microsoft-azure-data-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-batch-getting-started
+https://app.pluralsight.com/library/courses/microsoft-azure-appropriate-compute-solution-choosing
+https://app.pluralsight.com/library/courses/microsoft-azure-virtual-machine-deploying
+https://app.pluralsight.com/library/courses/microsoft-azure-connecting-virtual-networks
+https://app.pluralsight.com/library/courses/microsoft-azure-role-based-access-control-managing
+#Developing Solutions for Microsoft Azure (AZ-203)
+https://app.pluralsight.com/library/courses/microsoft-azure-virtual-machines-provisioning
+https://app.pluralsight.com/library/courses/microsoft-azure-deploying-multiple-virtual-machines
+https://app.pluralsight.com/library/courses/microsoft-azure-data-securing
+https://app.pluralsight.com/library/courses/microsoft-azure-containers-deploying-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-web-jobs
+https://app.pluralsight.com/library/courses/microsoft-azure-serverless-functions-create
+https://app.pluralsight.com/library/courses/azure-cosmos-db
+https://app.pluralsight.com/library/courses/microsoft-azure-sql-database-managing
+https://app.pluralsight.com/library/courses/microsoft-azure-blob-storage-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-resources-managed-identities-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-managing-active-directory
+https://app.pluralsight.com/library/courses/microsoft-azure-creating-configuring-storage-accounts
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-cdns-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-cache-implementing
+https://app.pluralsight.com/library/courses/microsoft-azure-application-insights-web-application-instrument
+https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-logic-app-creating
+https://app.pluralsight.com/library/courses/microsoft-azure-textual-content-search-enabling
+https://app.pluralsight.com/library/courses/microsoft-azure-implementing-web-mobile-services-update
+https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-messaging-eventing
+https://app.pluralsight.com/library/courses/microsoft-azure-performance-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-autoscaling-developing
+https://app.pluralsight.com/library/courses/microsoft-azure-authentication-scenarios-developers
+https://app.pluralsight.com/library/courses/microsoft-azure-batch-getting-started
+#Continuous Integration on Microsoft Azure for DevOps Engineers
+https://app.pluralsight.com/library/courses/microsoft-azure-creating-automated-build-workflow
+https://app.pluralsight.com/library/courses/azure-devops-application-testing-visual-studio
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-code-quality
+#Continuous Delivery on Microsoft Azure for DevOps Engineers
+https://app.pluralsight.com/library/courses/azure-devops-continuous-delivery-release-pipelines
+https://app.pluralsight.com/library/courses/microsoft-azure-manage-modularize-tasks-templates
+https://app.pluralsight.com/library/courses/microsoft-azure-select-implement-appropriate-deployment-pattern
+#Microsoft Azure Architect Design (AZ-301)
+https://app.pluralsight.com/library/courses/microsoft-azure-enterprise-architecture-information-gathering
+https://app.pluralsight.com/library/courses/microsoft-azure-non-functional-requirements-gathering
+https://app.pluralsight.com/library/courses/microsoft-azure-feasibility-determining-requirements-refining
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-solution-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-consumption-strategy-optimizing
+https://app.pluralsight.com/library/courses/microsoft-azure-auditing-design
+https://app.pluralsight.com/library/courses/microsoft-azure-identity-management-design
+https://app.pluralsight.com/library/courses/microsoft-azure-authentication-design
+https://app.pluralsight.com/library/courses/microsoft-azure-authorization-design
+https://app.pluralsight.com/library/courses/microsoft-azure-risk-prevention-design
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-identity-security-design
+https://app.pluralsight.com/library/courses/microsoft-azure-data-management-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-data-protection-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-data-flows-document-design
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-data-platform-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-site-recovery-strategy-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-high-availability-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-data-archiving-strategy-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-deployments-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-migrations-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-api-management-strategy-designing
+https://app.pluralsight.com/library/courses/microsoft-azure-storage-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-compute-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-networking-strategy-design
+https://app.pluralsight.com/library/courses/microsoft-azure-monitoring-strategy-infrastructure-design
+#Continuous Delivery and DevOps With Azure DevOps
+https://app.pluralsight.com/library/courses/continuous-delivery-azure-devops-big-picture
+https://app.pluralsight.com/library/courses/tfs-visual-studio-2017-continuous-delivery-devops
+https://app.pluralsight.com/library/courses/azure-devops-continuous-delivery-managing-builds
+https://app.pluralsight.com/library/courses/tfs-visual-studio-2017-release-management
+https://app.pluralsight.com/library/courses/tfs-visual-studio-2017-microsoft-features-packages-versioning
+#Monitoring and Managing Microsoft Azure Data Solutions
+https://app.pluralsight.com/library/courses/microsoft-azure-data-storage-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-database-playbook-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-data-pipelines-processing-monitoring
+https://app.pluralsight.com/library/courses/microsoft-azure-alert-playbook-configuration
+https://app.pluralsight.com/library/courses/microsoft-azure-optimizing-data-solutions
+https://app.pluralsight.com/library/courses/microsoft-azure-implementing-data-continuity-availability
+#Infrastructure as a Service (IaaS) using Microsoft Azure
+https://app.pluralsight.com/library/courses/azure-ad-deploying-integrating
+https://app.pluralsight.com/library/courses/azure-storage-understanding-using
+https://app.pluralsight.com/library/courses/azure-networking-architecting-implementing
+https://app.pluralsight.com/library/courses/azure-iaas-virtual-machines-deploying-managing
+https://app.pluralsight.com/library/courses/azure-services-providing-disaster-recovery
+https://app.pluralsight.com/library/courses/microsoft-azure-managing-active-directory
+https://app.pluralsight.com/library/courses/azure-iaas-solutions-automating-deployment-scale
+####DOCKEE
+#Managing Containers with Docker
+https://app.pluralsight.com/library/courses/docker-kubernetes-big-picture
+https://app.pluralsight.com/library/courses/docker-getting-started
+https://app.pluralsight.com/library/courses/docker-swarm-mode-getting-started
+https://app.pluralsight.com/library/courses/securing-docker-platform
+https://app.pluralsight.com/library/courses/docker-windows-getting-started
+https://app.pluralsight.com/library/courses/docker-networking
+https://app.pluralsight.com/library/courses/implementing-self-hosted-docker-registry
+https://app.pluralsight.com/library/courses/securing-docker-container-workloads
+https://app.pluralsight.com/library/courses/managing-load-balancing-scale-docker-swarm-clusters
+https://app.pluralsight.com/library/courses/docker-deep-dive-update
+https://app.pluralsight.com/library/courses/docker-images-managing
+https://app.pluralsight.com/library/courses/containerizing-software-application-docker
+https://app.pluralsight.com/library/courses/monitoring-containerized-app-health-docker
+https://app.pluralsight.com/library/courses/handling-data-stateful-applications-docker
+###vSphere
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-introduction
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-install-configure-vcenter-esxi
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-configure-vsphere-networking
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-admin-virtual-machines-vapps
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-availability-resource-management
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-perform-basic-troubleshooting
+https://app.pluralsight.com/library/courses/whats-new-vsphere-6-5
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-perform-basic-monitoring
+https://app.pluralsight.com/library/courses/vsphere-6-5-foundations-configure-vsphere-storage
+#Data Engineering on Google Cloud Platform
+https://app.pluralsight.com/library/courses/google-cloud-platform-big-data-machine-learning-fundamentals
+https://app.pluralsight.com/library/courses/leveraging-unstructured-data-cloud-dataproc-google-cloud-platform
+https://app.pluralsight.com/library/courses/serverless-data-analysis-google-bigquery-cloud-dataflow
+https://app.pluralsight.com/library/courses/serverless-machine-learning-tensorflow-google-cloud-platform
+https://app.pluralsight.com/library/courses/building-resilient-streaming-systems-google-cloud-platform
+#Architecting with Google Cloud Platform: Infrastructure
+https://app.pluralsight.com/library/courses/gcp-fundamentals
+https://app.pluralsight.com/library/courses/gcp-infrastructure-core-services
+https://app.pluralsight.com/library/courses/gcp-infrastructure-foundation
+https://app.pluralsight.com/library/courses/gcp-infrastructure-scaling-automation
+https://app.pluralsight.com/library/courses/gcp-infrastructure-containers-services
+#Agile Fundamentals (ICAgile)
+https://app.pluralsight.com/library/courses/achieving-agile-mindset-icagile
+https://app.pluralsight.com/library/courses/empowering-your-team-icagile
+https://app.pluralsight.com/library/courses/delivering-value-quickly-icagile
+https://app.pluralsight.com/library/courses/getting-your-customers-involved-icagile
+https://app.pluralsight.com/library/courses/adapting-your-processes-planning-icagile
+#Configuration Management using Puppet 4
+https://app.pluralsight.com/library/courses/puppet-system-administrators-fundamentals
+https://app.pluralsight.com/library/courses/puppet-4-language-essentials
+https://app.pluralsight.com/library/courses/puppet-4-working-modules-classes
+https://app.pluralsight.com/library/courses/puppet-4-files-templates
+https://app.pluralsight.com/library/courses/puppet-4-hiera
+https://app.pluralsight.com/library/courses/puppet-4-server-puppet-enterprise
+#Google: Professional Cloud Architect
+https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals
+https://app.pluralsight.com/library/courses/google-cloud-compute-engine-solutions-choosing-implementing
+https://app.pluralsight.com/library/courses/google-cloud-architecting-storage-configurations
+https://app.pluralsight.com/library/courses/google-cloud-platform-appengine-architecting-scalable-web-applications
+https://app.pluralsight.com/library/courses/google-cloud-platform-appengine-leveraging-advanced-features
+https://app.pluralsight.com/library/courses/google-apigee-api-management-streamlining
+https://app.pluralsight.com/library/courses/google-cloud-kubernetes-engine-leveraging-advanced-features
+https://app.pluralsight.com/library/courses/google-cloud-functions-architecting-event-driven-serverless-solutions
+https://app.pluralsight.com/library/courses/gcp-leveraging-network-interconnection-options
+https://app.pluralsight.com/library/courses/google-cloud-platform-leveraging-load-balancing-options
+https://app.pluralsight.com/library/courses/google-cloud-platform-leveraging-advanced-networking-load-balancing-services
+https://app.pluralsight.com/library/courses/google-stackdriver-managing-cloud-resources
+https://app.pluralsight.com/library/courses/google-cloud-kubernetes-engine-deploying-containerized-workloads
+https://app.pluralsight.com/library/courses/gcp-vcp-networks-architecting-global-private-clouds
+https://app.pluralsight.com/library/courses/google-stackdriver-managing-logs-errors-application-performance
+https://app.pluralsight.com/library/courses/google-cloud-platform-iam-regulating-resource
+https://app.pluralsight.com/library/courses/google-cloud-armor-security-scanner-data-loss-prevention-api-leveraging
+https://app.pluralsight.com/library/courses/managed-instance-groups-building-scalable-compute-solutions
+https://app.pluralsight.com/library/courses/google-key-management-service-customer-managed-encryption-keys-cmek-implementing
+https://app.pluralsight.com/library/courses/google-cloud-platform-deployment-manager-automating-infrastructure
+https://app.pluralsight.com/library/courses/google-cloud-platform-leveraging-architectural-design-patterns
+https://app.pluralsight.com/library/courses/google-cloud-platform-billing-apis-analyzing-visualizing-resource-usage
+#Linux Foundation Certified Engineer (LFCE)
+https://app.pluralsight.com/library/courses/linux-networking-advanced-lfce
+https://app.pluralsight.com/library/courses/advanced-network-system-administration-lfce
+https://app.pluralsight.com/library/courses/security-network-host-lfce
+https://app.pluralsight.com/library/courses/https-advanced-services-linux-lfce
+https://app.pluralsight.com/library/courses/linux-service-management-advanced-email-services
+https://app.pluralsight.com/library/courses/linux-http-services-administration
+#Linux Fundamentals
+https://app.pluralsight.com/library/courses/getting-started-linux
+https://app.pluralsight.com/library/courses/getting-started-linux-command-line
+https://app.pluralsight.com/library/courses/getting-started-linux-system-administration
+#LPIC-1
+https://app.pluralsight.com/library/courses/lfcs-red-hat-7-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-operation-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-user-group-management
+https://app.pluralsight.com/library/courses/lfcs-linux-storage-management
+https://app.pluralsight.com/library/courses/lfcs-linux-networking
+https://app.pluralsight.com/library/courses/creating-shell-scripts-enterprise-linux
+https://app.pluralsight.com/library/courses/lfcs-linux-service-management
+https://app.pluralsight.com/library/courses/lfcs-linux-virtualization-management
+https://app.pluralsight.com/library/courses/linux-managing-software-debian-software-management
+#LPIC-2
+https://app.pluralsight.com/library/courses/linux-monitoring-maintenance
+https://app.pluralsight.com/library/courses/linux-kernel-system-startup
+https://app.pluralsight.com/library/courses/linux-advanced-file-system-management
+https://app.pluralsight.com/library/courses/linux-managing-dns-servers-lpic-2
+https://app.pluralsight.com/library/courses/linux-managing-web-services-lpic-2
+https://app.pluralsight.com/library/courses/linux-managing-file-services-lpic-2
+https://app.pluralsight.com/library/courses/linux-network-client-management-lpic-2
+https://app.pluralsight.com/library/courses/linux-email-servers-lpic-2
+https://app.pluralsight.com/library/courses/linux-system-security-lpic-2
+#LPI Linux Essentials (010-160)
+https://app.pluralsight.com/library/courses/introduction-linux-essentials-010-160-exam
+https://app.pluralsight.com/library/courses/getting-started-linux
+https://app.pluralsight.com/library/courses/getting-started-linux-command-line
+https://app.pluralsight.com/library/courses/getting-started-linux-system-administration
+#Understanding DevOps
+https://app.pluralsight.com/library/courses/devops-big-picture
+https://app.pluralsight.com/library/courses/implementing-devops-real-world
+https://app.pluralsight.com/library/courses/agile-project-management
+https://app.pluralsight.com/library/courses/test-driven-development-big-picture
+https://app.pluralsight.com/library/courses/continuous-integration-delivery-big-picture
+https://app.pluralsight.com/library/courses/orchestration-automation-big-picture
+https://app.pluralsight.com/library/courses/infrastructure-code-big-picture
+https://app.pluralsight.com/library/courses/testing-automation-big-picture
+https://app.pluralsight.com/library/courses/continuous-monitoring-big-picture
+#CompTIA Linux+ (XK0-004)
+https://app.pluralsight.com/library/courses/lfcs-red-hat-7-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-operation-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-user-group-management
+https://app.pluralsight.com/library/courses/lfcs-linux-storage-management
+https://app.pluralsight.com/library/courses/lfcs-linux-networking
+https://app.pluralsight.com/library/courses/lfcs-linux-service-management
+https://app.pluralsight.com/library/courses/lfcs-linux-virtualization-management
+https://app.pluralsight.com/library/courses/linux-managing-software-debian-software-management
+https://app.pluralsight.com/library/courses/creating-shell-scripts-enterprise-linux
+https://app.pluralsight.com/library/courses/security-enhanced-linux-selinux-fundamentals
+#Linux Foundation Certified System Administrator (LFCS)
+https://app.pluralsight.com/library/courses/lfcs-red-hat-7-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-operation-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-user-group-management
+https://app.pluralsight.com/library/courses/lfcs-linux-storage-management
+https://app.pluralsight.com/library/courses/lfcs-linux-networking
+https://app.pluralsight.com/library/courses/lfcs-linux-service-management
+https://app.pluralsight.com/library/courses/lfcs-linux-virtualization-management
+https://app.pluralsight.com/library/courses/creating-shell-scripts-enterprise-linux
+https://app.pluralsight.com/library/courses/managing-selinux-policies-enterprise-linux
+#Red Hat Certified System Administrator (RHCSA)
+https://app.pluralsight.com/library/courses/lfcs-red-hat-7-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-operation-essentials
+https://app.pluralsight.com/library/courses/lfcs-linux-user-group-management
+https://app.pluralsight.com/library/courses/lfcs-linux-storage-management
+https://app.pluralsight.com/library/courses/lfcs-linux-networking
+https://app.pluralsight.com/library/courses/lfcs-linux-service-management
+https://app.pluralsight.com/library/courses/lfcs-linux-virtualization-management
+https://app.pluralsight.com/library/courses/creating-shell-scripts-enterprise-linux
+https://app.pluralsight.com/library/courses/managing-selinux-policies-enterprise-linux
+#JavaScript
+https://app.pluralsight.com/library/courses/html-css-javascript-big-picture
+https://app.pluralsight.com/library/courses/javascript-getting-started
+https://app.pluralsight.com/library/courses/javascript-fundamentals
+https://app.pluralsight.com/interactive-courses/detail/42de3814-9894-4dd5-8bf3-6946b5dcc242
+https://app.pluralsight.com/interactive-courses/detail/51aa0e0b-5527-46da-9789-de0ec381bd7e
+https://app.pluralsight.com/library/courses/javascript-objects-prototypes
+https://app.pluralsight.com/library/courses/javascript-practical-design-patterns
+https://app.pluralsight.com/library/courses/javascript-jquery-advanced-techniques
+https://app.pluralsight.com/library/courses/javascript-best-practices
+https://app.pluralsight.com/library/courses/rapid-es6-training
+https://app.pluralsight.com/interactive-courses/detail/db8ce03f-69d7-403e-b07f-6f7919e27ca5
+#React
+https://app.pluralsight.com/library/courses/react-big-picture
+https://app.pluralsight.com/library/courses/react-js-getting-started
+https://app.pluralsight.com/library/courses/react-fundamentals-update
+https://app.pluralsight.com/library/courses/using-react-hooks
+https://app.pluralsight.com/projects/build-a-quiz-component-with-react
+#Java Unit Testing
+https://app.pluralsight.com/library/courses/junit-5-unit-testing-getting-started
+https://app.pluralsight.com/library/courses/mockito-getting-started
+https://app.pluralsight.com/library/courses/tdd-junit5
+https://app.pluralsight.com/library/courses/java-unit-testing-legacy-code
+#Java EE Foundations
+https://app.pluralsight.com/library/courses/java-ee-big-picture
+https://app.pluralsight.com/library/courses/java-web-fundamentals
+https://app.pluralsight.com/interactive-courses/detail/a9601fa2-4d36-41f3-a0c2-58f152d838bc
+https://app.pluralsight.com/library/courses/java-ee-getting-started
+https://app.pluralsight.com/library/courses/java-ee-7-fundamentals
+https://app.pluralsight.com/library/courses/java-persistence-api-21
+https://app.pluralsight.com/library/courses/context-dependency-injection-1-1
+https://app.pluralsight.com/library/courses/bean-validation
+https://app.pluralsight.com/library/courses/build-asynchronous-restful-services-jersey
+https://app.pluralsight.com/library/courses/enterprise-jms-playbook
+#Java
+https://app.pluralsight.com/library/courses/modern-java-big-picture
+https://app.pluralsight.com/library/courses/java-fundamentals-language
+https://app.pluralsight.com/library/courses/java-fundamentals-collections
+https://app.pluralsight.com/interactive-courses/detail/56cf5a22-2068-4626-86d2-d08619610d3b
+https://app.pluralsight.com/interactive-courses/detail/4841e9b2-d3bf-4441-b8db-7b0b99d7bc33
+https://app.pluralsight.com/interactive-courses/detail/769e442d-0c13-414c-b244-7874dde8b99b
+https://app.pluralsight.com/library/courses/whats-new-in-java-13
+https://app.pluralsight.com/library/courses/java-fundamentals-core-platform
+https://app.pluralsight.com/library/courses/java-generics
+https://app.pluralsight.com/interactive-courses/detail/2725377c-611e-4e14-a81f-1be8cdaf4151
+https://app.pluralsight.com/library/courses/java-8-lambda-expressions-collections-streams
+https://app.pluralsight.com/library/courses/java8-dates-times-programming
+https://app.pluralsight.com/library/courses/java-core-libraries-jdbc
+https://app.pluralsight.com/library/courses/java-fundamentals-httpclient
+https://app.pluralsight.com/library/courses/getting-started-spring-batch
+https://app.pluralsight.com/library/courses/whats-new-java-10-local-variable-type-inference
+https://app.pluralsight.com/library/courses/whats-new-spring-5
+https://app.pluralsight.com/library/courses/java-ee-8-whats-new
+https://app.pluralsight.com/library/courses/xml-java-using-jaxb
+https://app.pluralsight.com/library/courses/xml-java-using-jaxb
+https://app.pluralsight.com/library/courses/java-fundamentals-nio-nio2
+https://app.pluralsight.com/library/courses/java-9-whats-new
+https://app.pluralsight.com/library/courses/java-9-micro-experimentation-tools
+https://app.pluralsight.com/library/courses/java-fundamentals-exception-handling
+#Google: Professional Cloud Data Engineer
+https://app.pluralsight.com/library/courses/android-fundamentals-styles-themes
+https://app.pluralsight.com/library/courses/google-dataproc-architecting-big-data-solutions
+https://app.pluralsight.com/library/courses/google-cloud-platform-composer-building-pipelines-workflow-orchestration
+https://app.pluralsight.com/library/courses/google-dataflow-architecting-serverless-big-data-solutions
+https://app.pluralsight.com/library/courses/google-cloud-platform-pubsub-architecting-stream-processing-solutions
+https://app.pluralsight.com/library/courses/google-bigquery-architecting-data-warehousing-solutions
+https://app.pluralsight.com/library/courses/sql-bigquery-ml-building-machine-learning-models
+https://app.pluralsight.com/library/courses/google-cloud-sql-creating-administering-instances
+https://app.pluralsight.com/library/courses/google-cloud-spanner-creating-administering-instances
+https://app.pluralsight.com/library/courses/google-cloud-platform-datastore-nosql-architecting-schemaless-scalable-databases
+https://app.pluralsight.com/library/courses/google-cloud-platform-memorystore-redis-leveraging-fully-managed-datastores
+https://app.pluralsight.com/library/courses/google-cloud-platform-firestore-leveraging-realtime-database-solutions
+https://app.pluralsight.com/library/courses/google-cloud-platform-firebase-architecting-scalable-web-applications
+https://app.pluralsight.com/library/courses/google-bigtable-architecting-big-data-solutions
+https://app.pluralsight.com/library/courses/google-cloud-platform-datalab-source-repositories-developing
+https://app.pluralsight.com/library/courses/google-machine-learning-apis-designing-implementing-solutions
+https://app.pluralsight.com/library/courses/google-cloud-automl-designing-implementing-solutions
+https://app.pluralsight.com/library/courses/google-ml-engine-architecting-production-ready-models
+https://app.pluralsight.com/library/courses/google-cloud-platform-designing-scalable-data-architectures
+#Google Cloud Functions
+https://app.pluralsight.com/library/courses/google-cloud-functions-getting-started
+https://app.pluralsight.com/library/courses/google-cloud-functions-fundamentals
+https://app.pluralsight.com/library/courses/firebase-functions-fundamentals
+#Design Patterns in Java
+https://app.pluralsight.com/library/courses/design-patterns-java-creational
+https://app.pluralsight.com/library/courses/design-patterns-java-structural
+https://app.pluralsight.com/library/courses/design-patterns-java-behavioral
+#Core Spring
+https://app.pluralsight.com/library/courses/spring-big-picture
+https://app.pluralsight.com/library/courses/creating-first-spring-boot-application
+https://app.pluralsight.com/library/courses/spring-framework-spring-fundamentals
+https://app.pluralsight.com/library/courses/springmvc-intro
+https://app.pluralsight.com/library/courses/spring-mvc4-introduction
+https://app.pluralsight.com/library/courses/building-applications-spring-jdbc
+https://app.pluralsight.com/library/courses/spring-jpa-hibernate
+https://app.pluralsight.com/library/courses/spring-data-jpa-getting-started
+https://app.pluralsight.com/library/courses/aspect-oriented-programming-spring-aspectj
+https://app.pluralsight.com/library/courses/spring-security-fundamentals
+https://app.pluralsight.com/library/courses/spring-cloud-fundamentals
+#Google: Associate Android Developer (AAD)
+https://app.pluralsight.com/library/courses/android-application-basics-understanding
+https://app.pluralsight.com/library/courses/android-tools-testing
+https://app.pluralsight.com/projects/add-implicit-and-explicit-intents-to-an-android-candy-store-app
+https://app.pluralsight.com/library/courses/android-enhancing-application-experience
+https://app.pluralsight.com/library/courses/android-managing-app-data-sqlite
+https://app.pluralsight.com/library/courses/android-exposing-data-information-outside-app
+https://app.pluralsight.com/library/courses/android-leveraging-power-platform
+https://app.pluralsight.com/library/courses/android-broadening-app-appeal-reach
+#iOS App Development — Fundamentals
+https://app.pluralsight.com/library/courses/swift3-fundamentals
+https://app.pluralsight.com/library/courses/ios-11-fundamentals
+https://app.pluralsight.com/library/courses/becoming-xcode-power-user
+https://app.pluralsight.com/library/courses/ios-data-persistence-big-picture
+https://app.pluralsight.com/library/courses/ios-collection-views-getting-started
+https://app.pluralsight.com/library/courses/ios-networking-rest-apis
+https://app.pluralsight.com/library/courses/testing-fundamentals-ios
+https://app.pluralsight.com/library/courses/swift-core-data-fundamentals
+https://app.pluralsight.com/library/courses/server-side-swift-vapor-getting-started
+#Java Coding Practices
+https://app.pluralsight.com/library/courses/java-writing-readable-maintainable-code
+https://app.pluralsight.com/library/courses/defensive-programming-java
+https://app.pluralsight.com/library/courses/java-refactoring-best-practices
+https://app.pluralsight.com/library/courses/solid-software-design-principles-java
+#Java Tooling
+https://app.pluralsight.com/library/courses/intellij-ce-getting-started
+https://app.pluralsight.com/library/courses/guided-tour-eclipse-for-java
+https://app.pluralsight.com/library/courses/maven-fundamentals
+https://app.pluralsight.com/library/courses/gradle-fundamentals
+#CSS
+https://app.pluralsight.com/library/courses/html-css-javascript-big-picture
+https://app.pluralsight.com/library/courses/css-intro
+https://app.pluralsight.com/library/courses/css-positioning-1834
+https://app.pluralsight.com/interactive-courses/detail/c580b092-d94a-4ed8-8d2a-2f4d0b76f99f
+https://app.pluralsight.com/library/courses/less-getting-started
+https://app.pluralsight.com/library/courses/responsive-websites-bootstrap3
+https://app.pluralsight.com/interactive-courses/detail/a089d0a5-4a4c-4c4e-b883-c1bc64009619
+https://app.pluralsight.com/projects/build-a-rock-climbing-company-landing-page-with-html-css
+https://app.pluralsight.com/library/courses/play-by-play-lea-verou
+#Domain-Driven Design
+https://app.pluralsight.com/library/courses/clean-architecture-patterns-practices-principles
+https://app.pluralsight.com/library/courses/modern-software-architecture-domain-models-cqrs-event-sourcing
+https://app.pluralsight.com/library/courses/domain-driven-design-fundamentals
+https://app.pluralsight.com/library/courses/domain-driven-design-in-practice
+https://app.pluralsight.com/library/courses/refactoring-anemic-domain-model
+https://app.pluralsight.com/library/courses/csharp-specification-pattern
+https://app.pluralsight.com/library/courses/domain-driven-design-legacy-projects
+https://app.pluralsight.com/library/courses/cqrs-in-practice
+#droidcon NYC 2019
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-05
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-11
+https://app.pluralsight.com/library/courses/droidcon-nyc-2019-session-12
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-15
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-16
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-17
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-19
+https://app.pluralsight.com/library/courses/droidcon-nyc-2019-session-23
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-25
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-27
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-28
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-29
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-34
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-38
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-41
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-42
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-46
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-56
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-68
+https://app.pluralsight.com/library/courses/droidcon-nyc-session-62
+#Android Development with Kotlin — App Fundamentals
+https://app.pluralsight.com/library/courses/android-apps-kotlin-build-first-app
+https://app.pluralsight.com/library/courses/android-apps-kotlin-tools-testing
+https://app.pluralsight.com/library/courses/android-kotlin-apps-resources-styles-themes
+https://app.pluralsight.com/library/courses/android-apps-kotlin-recyclerview-navigation-drawer
+https://app.pluralsight.com/library/courses/android-apps-kotlin-viewmodel-lifecycle
+#Security for Hackers and Developers 
+https://app.pluralsight.com/library/courses/code-auditing-security-hackers-developers
+https://app.pluralsight.com/library/courses/fuzzing-security-hackers-developers
+https://app.pluralsight.com/library/courses/reverse-engineering-security-hackers-developers
+https://app.pluralsight.com/library/courses/exploit-development-security-hackers-developers
+https://app.pluralsight.com/library/courses/malware-advanced-analysis-combating-exploit-kits
+#Web Application Security
+https://app.pluralsight.com/library/courses/play-by-play-modern-web-security-patterns
+https://app.pluralsight.com/library/courses/https-every-developer-must-know
+https://app.pluralsight.com/library/courses/browser-security-headers
+https://app.pluralsight.com/library/courses/modern-browser-security-reports
+https://app.pluralsight.com/library/courses/play-by-play-owasp-top-ten-2017
+https://app.pluralsight.com/library/courses/hack-yourself-first
+https://app.pluralsight.com/library/courses/secure-coding-identifying-mitigating-xxe-vulnerabilities
+https://app.pluralsight.com/library/courses/secure-coding-insecure-deserialization-preventing
+https://app.pluralsight.com/library/courses/secure-coding-using-components-known-vulnerabilities
+https://app.pluralsight.com/library/courses/secure-coding-preventing-insufficient-logging-monitoring
+#Ethical Hacking Fundamentals
+https://app.pluralsight.com/library/courses/ethical-hacking-understanding
+https://app.pluralsight.com/library/courses/ethical-hacking-reconnaissance-footprinting
+https://app.pluralsight.com/library/courses/ethical-hacking-scanning-networks
+https://app.pluralsight.com/library/courses/ethical-hacking-enumeration
+https://app.pluralsight.com/library/courses/ethical-hacking-vulnerability-analysis
+https://app.pluralsight.com/library/courses/ethical-hacking-system-hacking
+https://app.pluralsight.com/library/courses/ethical-hacking-malware-threats
+https://app.pluralsight.com/library/courses/ethical-hacking-sniffing
+https://app.pluralsight.com/library/courses/ethical-hacking-social-engineering
+https://app.pluralsight.com/library/courses/ethical-hacking-denial-service
+https://app.pluralsight.com/library/courses/ethical-hacking-session-hijacking
+https://app.pluralsight.com/library/courses/ethical-hacking-evading-ids-firewalls-honeypots
+https://app.pluralsight.com/library/courses/ethical-hacking-web-servers
+https://app.pluralsight.com/library/courses/ethical-hacking-web-applications
+https://app.pluralsight.com/library/courses/ethical-hacking-sql-injection
+https://app.pluralsight.com/library/courses/ethical-hacking-wireless-networks
+https://app.pluralsight.com/library/courses/ethical-hacking-mobile-platforms
+https://app.pluralsight.com/library/courses/ethical-hacking-hacking-internet-of-things
+https://app.pluralsight.com/library/courses/ethical-hacking-cloud-computing
+https://app.pluralsight.com/library/courses/ethical-hacking-cryptography-ceh
+https://app.pluralsight.com/library/courses/ethical-hacking-penetration-testing
+#Otros
+https://app.pluralsight.com/library/courses/reactive-programming-java-12-rxjava-2
+https://app.pluralsight.com/library/courses/building-scalable-java-microservices-spring-boot-spring-cloud
+https://app.pluralsight.com/library/courses/applying-functional-programming-techniques-java
+https://app.pluralsight.com/library/courses/object-oriented-java-code
+https://app.pluralsight.com/library/courses/securing-java-web-application-data
+https://app.pluralsight.com/library/courses/java-ee-json-using-jsonp-jsonb
+https://app.pluralsight.com/library/courses/java-bdd-cucumber-gherkin-getting-started
+https://app.pluralsight.com/library/courses/implementing-test-pyramid-strategy-java
+https://app.pluralsight.com/library/courses/java-performance-tuning
+https://app.pluralsight.com/library/courses/java-json-jackson-databinding
+https://app.pluralsight.com/library/courses/java-12-whats-new
+https://app.pluralsight.com/library/courses/automated-tests-java-fluent-interface-webdriver-selenium
+https://app.pluralsight.com/library/courses/java-fundamentals-reflection-api-method-handles
+https://app.pluralsight.com/library/courses/java-bdd-fundamentals
+https://app.pluralsight.com/library/courses/testng-getting-started
+https://app.pluralsight.com/library/courses/java-securing-web-applications-aaa
+https://app.pluralsight.com/library/courses/java-11-whats-new
+https://app.pluralsight.com/library/courses/java-json-fundamentals
+https://app.pluralsight.com/library/courses/java-fundamentals-asynchronous-programming-completionstage
+
+#Angular
+https://app.pluralsight.com/library/courses/ng-big-picture
+https://app.pluralsight.com/library/courses/angular-2-getting-started-update
+https://app.pluralsight.com/library/courses/angular-forms
+https://app.pluralsight.com/library/courses/angular-cli
+https://app.pluralsight.com/projects/build-an-album-store-product-page-with-angular
+https://app.pluralsight.com/library/courses/angular-fundamentals
+https://app.pluralsight.com/library/courses/angular-routing
+https://app.pluralsight.com/library/courses/openid-and-oauth2-securing-angular-apps
+https://app.pluralsight.com/library/courses/unit-testing-angular
+https://app.pluralsight.com/library/courses/angular-2-reactive-forms
+https://app.pluralsight.com/library/courses/angular-ngrx-getting-started
+https://app.pluralsight.com/library/courses/angular-http-communication
+https://app.pluralsight.com/library/courses/angular-services
+https://app.pluralsight.com/library/courses/best-practices-angular
+https://app.pluralsight.com/library/courses/angular-architecture-best-practices
+
